@@ -1,13 +1,25 @@
-Vonandi getum við í bráð litið á þessa skrá og helgið að henni.
+Vonandi getum við í bráð litið á þessa skrá og hlegið að henni.
 
-git init 	 #Fyrsta skipunin. Ekki viss hvort við þurfum hana alltaf.
-git add 'nafn' 	 #Bætir við skrá til að fylgjast með.
+git init 	 	 #Fyrsta skipunin. Ekki viss hvort við þurfum hana alltaf.
+git add 'nafn' 	 	 #Bætir við skrá til að fylgjast með.
 git commit -am 'strengur #Staðfestir breytingarnar locally og útskýrir breytingar með %strengur
 git push origin master   #Allavega fyrir Mána.
 
+
 #Ef Jón er búinn að breyta og Máni vill sameina
+git fetch Blondal
 git merge Blondal/master
 git push origin master
 
 #Til að sjá muninn milli versiona notar maður git diff
 
+Jón gerir þetta til að ná í breytingar frá mána?
+git fetch p-legar
+git merge p-legar/master
+
+Jón gerir þetta til að vista breytingar til mána?
+git commit -am 'strengur'
+git push origin master
+
+
+git add 'nafn'
