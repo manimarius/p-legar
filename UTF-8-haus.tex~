@@ -1,0 +1,16 @@
+\documentclass[12pt]{article}
+\usepackage[icelandic,english]{babel}
+\usepackage{a4,t1enc,html,url}
+\usepackage{ucs}
+\usepackage{times}
+\usepackage[utf8x]{inputenc}
+%\pagestyle{empty}
+\usepackage{graphicx,latexsym}
+\parindent 0pt
+%
+\usepackage{amsmath} 
+\usepackage{graphicx,latexsym} 
+\usepackage{amssymb}
+\author{Máni Maríus Viðarsson}
+%----------------------------------------------------------
+
