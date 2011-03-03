@@ -9,4 +9,5 @@ git push origin master   #Allavega fyrir Mána.
 git merge Blondal/master
 git push origin master
 
+#Til að sjá muninn milli versiona notar maður git diff
 
