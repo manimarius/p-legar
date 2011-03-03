@@ -1,15 +1,12 @@
-LESTU ÞETTA TUSSA halló kall
+Vonandi getum við í bráð litið á þessa skrá og helgið að henni.
 
-
-
-git init  #Fyrsta skipunin.
-git add 'nafn' #Bætir við skrá til að fylgjast með.
+git init 	 #Fyrsta skipunin. Ekki viss hvort við þurfum hana alltaf.
+git add 'nafn' 	 #Bætir við skrá til að fylgjast með.
 git commit -am 'strengur #Staðfestir breytingarnar locally og útskýrir breytingar með %strengur
+git push origin master   #Allavega fyrir Mána.
 
-
-
-git pull
+#Ef Jón er búinn að breyta og Máni vill sameina
+git merge Blondal/master
 git push origin master
-git add 'nafn'
-git commit -am 'strengur'
+
 
