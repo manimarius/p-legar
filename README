@@ -6,10 +6,12 @@ git init  #Fyrsta skipunin.
 git add 'nafn' #Bætir við skrá til að fylgjast með.
 git commit -am 'strengur #Staðfestir breytingarnar locally og útskýrir breytingar með %strengur
 
+Jón gerir þetta til að ná í breytingar frá mána?
+git fetch p-legar
+git merge p-legar/master
 
-
-git pull
-git push origin master
-git add 'nafn'
+Jón gerir þetta til að vista breytingar til mána?
 git commit -am 'strengur'
+git push origin master
 
+git add 'nafn'
