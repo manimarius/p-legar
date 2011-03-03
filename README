@@ -1,10 +1,15 @@
 LESTU ÞETTA TUSSA halló kall
-<<<<<<< HEAD
 
-=======
-git init
+
+
+git init  #Fyrsta skipunin.
+git add 'nafn' #Bætir við skrá til að fylgjast með.
+git commit -am 'strengur #Staðfestir breytingarnar locally og útskýrir breytingar með %strengur
+
+
+
 git pull
 git push origin master
 git add 'nafn'
 git commit -am 'strengur'
->>>>>>> Blondal/master
+
