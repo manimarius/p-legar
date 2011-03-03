@@ -1,2 +1,10 @@
 LESTU ÞETTA TUSSA halló kall
+<<<<<<< HEAD
 
+=======
+git init
+git pull
+git push origin master
+git add 'nafn'
+git commit -am 'strengur'
+>>>>>>> Blondal/master
