@@ -1,2 +1,6 @@
 LESTU ÞETTA TUSSA halló kall
-
+git init
+git pull
+git push origin master
+git add 'nafn'
+git commit -am 'strengur'
