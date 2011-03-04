@@ -22,4 +22,6 @@ git commit -am 'strengur'
 git push origin master
 
 
-git add 'nafn'
+Góðir siðir til að lágmarka merge conflict:
+1.Ekki hafa línu lengri en 79 tákn.
+2.Gera alltaf nýja línu eftir punkt.
