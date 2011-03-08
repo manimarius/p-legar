@@ -10,6 +10,8 @@ git push origin master   #Allavega fyrir Mána.
 git fetch Blondal
 git merge Blondal/master
 git push origin master
+#eða núna bara:
+git pull Blondal master
 
 #Til að sjá muninn milli versiona notar maður git diff
 
