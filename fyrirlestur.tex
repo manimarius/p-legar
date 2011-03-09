@@ -53,6 +53,38 @@ _{p^{k+1}} \mapsto \left[\sum_{j=0}^{k-1} a_j p^j \right]_{p^k}.
 
 %Hér byrjar svo seinni fyrirlestur
 %BLS 47 í Mahler
+\section*{Samleitnar runur}
+\begin{setn}
+Ef $k$ er fullkomið svið m.t.t. óarkemedískar virðingar $\| \|$, og ef $\{ a_n \} $ er 
+runa af stökum í $k$ þ.a. $\lim a_n = 0$, þá er $\sum_{n=1}^\infty a_n$ samleitin.
+\end{setn}
+\begin{proof}
+Lát 
+\begin{equation*}
+s_n = a_1+ \ldots + a_n
+\end{equation*}
+og
+\begin{equation*}
+s_m = a_1 + \ldots + a_m,
+\end{equation*}
+þar sem $m < n$. Þá
+\begin{equation*}
+\|s_n - s_m \| = \| a_n + \ldots + a_{m+1} \| \leq \max_{m+1 \leq i \leq n} \|a_i\| \rightarrow 0
+\end{equation*}
+þegar $n,m \rightarrow \infty$, því er $\lim s_n$ til þar sem $k$ er fullkomið. Þ.a.l er $\sum_{n=1}^\infty a_n$ samleitin.
+\end{proof}
+
+\begin{setn}
+Ef $k$ er fullkomið svið m.t.t. virðingar $\| \|$, og ef $\{ a_n \}$ er runa af stökum í $k$ 
+þ.a. $\sum_{n=1}^{\infty} \| a_n \| $ er samleitin, þá er $\sum_{n=1}^\infty a_n $ samleitin. 
+\end{setn}
+\begin{proof}
+Lát 
+\begin{equation}
+ s_n' = \| a_1 \| + \ldots + \|a_n\|, \qquad s_n = a_1 + \ldots + a_n.
+\end{equation}
+%Þú ert hér máni
+\end{proof}
 \section*{Samfelld föll}
 Látum $I=[Q_p]$ tákna mengi allra p-legra heiltalna
 \begin{equation*}
