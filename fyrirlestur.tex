@@ -71,10 +71,11 @@ gerir það að þjöppuðu rúmi.\\
 
 
 %Hér byrjar svo seinni fyrirlestur
-%BLS 47 í Mahler
+
+%bls 25 Bachmann
 \section*{Samleitnar runur}
 \begin{setn}
-Ef $k$ er fullkomið svið m.t.t. óarkemedískar virðingar $\| \|$, og ef $\{ a_n \} $ er 
+Ef $k$ er fullkomið svið m.t.t. óarkemedískar virðingar $\| \cdot  \|$, og ef $\{ a_n \} $ er 
 runa af stökum í $k$ þ.a. $\lim a_n = 0$, þá er $\sum_{n=1}^\infty a_n$ samleitin.
 \end{setn}
 \begin{proof}
@@ -94,16 +95,31 @@ s_m = a_1 + \ldots + a_m,
 \end{proof}
 
 \begin{setn}
-Ef $k$ er fullkomið svið m.t.t. virðingar $\| \|$, og ef $\{ a_n \}$ er runa af stökum í $k$ 
+Ef $k$ er fullkomið svið m.t.t. virðingar $\| \cdot \|$, og ef $\{ a_n \}$ er runa af stökum í $k$ 
 þ.a. $\sum_{n=1}^{\infty} \| a_n \| $ er samleitin, þá er $\sum_{n=1}^\infty a_n $ samleitin. 
 \end{setn}
 \begin{proof}
 Lát 
-\begin{equation}
+\begin{equation*}
  s_n' = \| a_1 \| + \ldots + \|a_n\|, \qquad s_n = a_1 + \ldots + a_n.
+\end{equation*}
+Þá fyrir $n>m$, 
+\begin{equation*}
+|s_n'- s_m' | = | \| a_n \| + \ldots \|a_{m+1}\| |.
+\end{equation*}
+þar sem algildið $\| s_n' - s_m' \| $ vísir til venjulega  tölugildisins á $\mathbb{R}$. En 
+\begin{equation*}
+| \| a_n \| + \ldots + \| a_{m+1} \| | = \| a_n \| + \ldots + \| a_{m+1} \|
+\end{equation*}
+því $\| a_i \| \leq 0$, og 
+\begin{equation}
+\| s_n - s_m \| = \|a_n\| + \ldots + \|a_{m+1}\| \rightarrow 0
 \end{equation}
-%Þú ert hér máni
+þegar $n,m \rightarrow \infty$ fyrst að $\sum_{n=1}^\infty \|a_n\|$ er samleitin. 
+Því fæst $\|s_n - s_m \| \rightarrow 0$ þegar $n,m \rightarrow \infty $ og þar sem $k$ er fullkomið fæst niðurstaðan.  
 \end{proof}
+
+%bls 47 Mahler.
 \section*{Samfelld föll}
 Látum $I=[Q_p]$ tákna mengi allra p-legra heiltalna
 \begin{equation*}
