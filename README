@@ -23,6 +23,8 @@ Jón gerir þetta til að vista breytingar til mána?
 git commit -am 'strengur'
 git push origin master
 
+#Til að endurkalla seinasta commit
+git revert HEAD
 
 Góðir siðir til að lágmarka merge conflict:
 1.Ekki hafa línu lengri en 79 tákn.

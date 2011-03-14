@@ -224,9 +224,10 @@ r = \frac{1}{\limsup \sqrt{\|a_n\|_p }}.
 %Hér vantar örugglega smá
 %Rökstyðja þetta
 Við höfum að 
-\begin{equation*}
+\begin{equation}
+\label{starwars}
 \mbox{ord}_p xy = \mbox{ord}_p x + \mbox{ord}_p y
-\end{equation*}
+\end{equation}
 sem leiðir beint af $\|xy\|_p = \|x\|_p \|y\|_p$.
 %----
 \begin{hjalparsetn}
@@ -246,12 +247,47 @@ náttúrulega framsetningu þess. Þá er
 Samleitnisvæðið fyrir veldvísisröðina $E(x) = \sum_{n=0}^{\infty} x^n/n!$ er mengi allra x þ.a.
 $\mbox{ord}_px>1/(p-1)$.
 \end{setn}
-%Sö
+\begin{proof}
+Með því að nota \ref{starwars} og hjálparsetninguna hér að ofan fáum við
+\begin{align*}
+\mbox{ord}_p \left( \frac{x^n}{n!} \right) & =  n \mbox{ord}_p x - \mbox{ord}_p(n!) & \\
+ & =  n \mbox{ord}_p x - \left( \frac{n - s_n}{p-1} \right) &\\ 
+ & =  n \left( \mbox{ord}_p x - \frac{1}{p-1} \right) + \frac{s_n}{p-1}&
+\end{align*}
+svo ef $\mbox{ord}_p x > 1/(p-1)$ þá $\lim_{n\rightarrow \infty } \mbox{ord}_p (x^n/n!) \rightarrow \infty$ 
+og því $\|x^n/n!\|_p \rightarrow 0$, þ.e.a.s röðin er samleitin.
+Ef aftur á móti $\mbox{ord}_px \leq 1/(p-1)$, þá fæst að fyrir öll $n$ af gerðinni $p^k$ að $s_n = 1$ og því $\mbox{ord}_p(x^n/n!) \nrightarrow \infty$.
+\end{proof}
+\begin{daemi}
+%útskýra
+Ef $p=2$ og $x \in \mathbb{Z}$, þá gefur seinasta setning af sér að $x$ verður að vera margfeldi af 4 til að vera í samleitnigeisla veldisvísisfallsins. 
+\end{daemi}
 
 \begin{setn}
 Samleitnisvæðið fyrir lograröðina $\log(1+x) = \sum_{n=1}^{\infty} (-1)^{n-1}x^n/n$, er mengi allra x þ.a. $\mbox{ord}_px>0$.
 \end{setn}
-%Sö
+\begin{proof}
+Við höfum að 
+\begin{equation} \label{daft}
+\mbox{ord}_p \left( \frac{(-1)^{n-1}x^n}{n} \right) = n \mbox{ord}_px - \mbox{ord}_p n.
+\end{equation}
+Hinsvegar vitum við að 
+\begin{equation*}
+p^{\mbox{ord}_p n} \leq n,
+\end{equation*}
+og því 
+\begin{equation*}
+\mbox{ord}_p n \leq \frac{\log n}{\log p}.
+\end{equation*}
+Með því að stinga þessu inní jöfnu \ref{daft} sýnir að ef $\mbox{ord}_p x> 0$, þá
+\begin{equation*}
+\mbox{ord}_p \left( \frac{(-1)^{n-1}x^n}{n} \right) \rightarrow \infty,
+\end{equation*}
+og röðin er því samleitin. Ef aftur á móti $\mbox{ord}_p x \leq 0$, þá fæst að fyrir þau n þ.a. $p \nmid n $ að $\mbox{ord}_pn=0$, og
+\begin{equation*}
+\mbox{ord}_p \left( \frac{(-1)^{n-1}x^n}{n} \right) \nrightarrow \infty
+\end{equation*}
+\end{proof}
 
 %bls 47 Mahler.
 \section*{Samfelld föll}
