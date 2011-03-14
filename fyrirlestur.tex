@@ -61,9 +61,10 @@ röðinni $\ref{Zruna}$
 Stak $x$ í $\mathbb{Z}_p$ er runan $(\ldots , x_n, \ldots, x_1)$ þar sem 
 $x_n \in \mathbb{Z}/p^n\mathbb{Z}$ og $\phi_n(x_{n+1}) = x_{n}$.
 Athugum nú að $\mathbb{Z}_p$ er hlutbaugur í mengjamargfeldinu
- $\prod_{n \geq 1} \mathbb{Z}/p^n\mathbb{Z}$. Ef við setjum strjála 
-grannmynstrið og $\prod_{n \geq 1} \mathbb{Z}/p^n\mathbb{Z}$ 
-margfeldisgrannmynstrinu, erfir $\mathbb{Z}_p$ grannmynstrið sem 
+ $\prod_{n \geq 1} \mathbb{Z}/p^n\mathbb{Z}$. Ef við setjum á 
+$\mathbb{Z}/p^n\mathbb{Z}$ strjála grannmynstrið og á 
+$\prod_{n \geq 1} \mathbb{Z}/p^n\mathbb{Z}$ 
+margfeldisgrannmynstrið, erfir $\mathbb{Z}_p$ grannmynstrið sem 
 gerir það að þjöppuðu rúmi.\\
 %\\Látum nú $\varepsilon_n : \mathbb{Z}_p \rightarrow \mathbb{Z}/p^n 
 %\mathbb{Z}$ vera fallið sem varpar p-legri heiltölu $x$ á n-ta stakið $x_n$.
@@ -87,7 +88,7 @@ gerir það að þjöppuðu rúmi.\\
 \begin{setn}
  (a) Til að stak í $\mathbb{Z}_p$ hafi umhverfu er nauðsynlegt og nægjanlegt 
 að það sé ekki deilanlegt með $p$.\\
- (b) Ef $\mathbb{U}$ er stak umhverfanlegra staka í $\mathbb{Z}_p$ er hægt að 
+ (b) Ef $\mathbb{U}$ er mengi umhverfanlegra staka í $\mathbb{Z}_p$ er hægt að 
 skrifa hvert stak (nema núll) á óvtvírætt ákvarðaðan hátt á forminu $p^nu$ þar
  sem $u \in \mathbb{U}$ og $n\geq 0$.
 \end{setn}
@@ -108,15 +109,24 @@ Hinsvegar, ef $x \in \mathbb{Z}_p$ er ekki núll, þá er til stærsta heiltala
 $n$ þannig að $x_n = \varepsilon_n(x)$ er núll; þá er $x = p^nu$ með $u$ ekki 
 deilanlegt með p, og því er $u \in \mathbb{U}$ vegna (a). 
 \end{proof}
+\begin{skilgr}
+ Virðing á sviði K er vörpun $K \rightarrow \mathbb{R}$ þ.a.
+\begin{align*}
+ i)& \  |x|\geq 0; |x| = 0 \mbox{ þþaa } x = 0 \\
+ ii)& \  |xy| = |x||y| \\
+ iii)& \  |x+y| \leq |x| + |y|
+\end{align*}
+\end{skilgr}
 \begin{Rit}
 Látum $x \in \mathbb{Z}_p$, $x \neq 0$; skrifum $x$ á forminu $p^nu$ með 
-$u \in U$. Talan $n$ er kölluð $p$-lega virðingin á $x$ og er skrifuð sem 
+$u \in \mathbb{U}$. Talan $n$ er kölluð $p$-lega virðingin á $x$ og er skrifuð sem 
 $v_p(x)$. Við setjum $v_p(0) = +\infty$ og höfum 
 \begin{align*}
  v_p(xy) &= v_p(x) + v_p(y) \\
  v_p(x+y) &\geq \inf(v_p(x),v_p(y))
 \end{align*}
 Augljóst er af þessum formúlum að $\mathbb{Z}_p$ er heilbaugur.
+
 \end{Rit}
 \begin{setn}
  Grannmynstrið á $\mathbb{Z}_p$ má skilgreina með firðinni
@@ -129,7 +139,7 @@ Baugurinn $\mathbb{Z}_p$ er fullkomið firðrúm og $\mathbb{Z}$  er þétt
 \begin{proof}
  Íðulin $p^n \mathbb{Z}_p$ mynda grunn af grenndum um 0 og vegna þess að 
 $x \in p^n \mathbb{Z}_p$ er jafngilt því að $v_p(x) \geq n$ er grannmynstrið 
-á $\mathbb{Z}$ skilgreint með firðinni $d(x,y) = e^{-v_p(x-y)}$. 
+á $\mathbb{Z}_p$ skilgreint með firðinni $d(x,y) = e^{-v_p(x-y)}$. 
 Fyrst að $\mathbb{Z}_p$ er þjappað, er það fullkomið. Að lokum, ef $x = (x_n)$
  er stak í $\mathbb{Z}_p$ og ef $y_n \in \mathbb{Z}$ þannig að 
 $y_n \equiv x_n(mod p^n)$, þá er $\lim y_n = x$, sem sannar að $\mathbb{Z}$ 
@@ -153,7 +163,7 @@ hlutbaug; sviðið $\mathbb{Q}$ er þétt í $\mathbb{Q}_p$.
  Augljóst.
 \end{proof}
 $Athugasemdir$\\
-(1) Við hefum getað skilgreint $\mathbb{Q}_p$ sem fullkomnuna á $\mathbb{Q}$ 
+(1) Við hefðum getað skilgreint $\mathbb{Q}_p$ sem fullkomnuna á $\mathbb{Q}$ 
 fyrir $p$-legu firðina $d$.\\
 (2) Firðin $d$ er ofurfirð, það er 
 \begin{align*}
