@@ -135,6 +135,45 @@ Lát
 Því fæst $\|s_n - s_m \| \rightarrow 0$ þegar $n,m \rightarrow \infty $ og þar sem $k$ er fullkomið fæst niðurstaðan.  
 \end{proof}
 
+Fyrir veldaröð $\sum_{n=0}^{\infty} a_nx^n$ í $\mathbb{R}$ eða $\mathbb{C}$ segjum við að hún hafi samleitnigeislan $r$ 
+m.t.t. p-lega staðalsins ef fyrir öll x þ.a. $\|x\|_p < r$ veldaröðin er samleitin, en ósamleitin fyrir öll x þ.a. $\|x\|_p > r$, 
+þar sem r er gefið með
+\begin{equation*}
+r = \frac{1}{\limsup \sqrt{\|a_n\|_p }}.
+\end{equation*} 
+
+%Hér vantar örugglega smá
+%Rökstyðja þetta
+Við höfum að 
+\begin{equation*}
+\mbox{ord}_p xy = \mbox{ord}_p x + \mbox{ord}_p y
+\end{equation*}
+sem leiðir beint af $\|xy\|_p = \|x\|_p \|y\|_p$.
+%----
+\begin{hjalparsetn}
+Lát $n$ vera jákvæða heiltölu og 
+\begin{equation*}
+n = a_0 + a_1p+ \ldots + a_tp^t, \qquad 0\leq a_i \leq p - 1
+\end{equation*}
+náttúrulega framsetningu þess. Þá er
+\begin{equation*}
+\mbox{ord}_p(n!) = \frac{n - s_n}{p-1}
+\end{equation*}
+þar sem $s_n = a_0 + a_1 + \ldots + a_t$.
+\end{hjalparsetn}
+%VANTAR SÖ
+
+\begin{setn}
+Samleitnisvæðið fyrir veldvísisröðina $E(x) = \sum_{n=0}^{\infty} x^n/n!$ er mengi allra x þ.a.
+$\mbox{ord}_px>1/(p-1)$.
+\end{setn}
+%Sö
+
+\begin{setn}
+Samleitnisvæðið fyrir lograröðina $\log(1+x) = \sum_{n=1}^{\infty} (-1)^{n-1}x^n/n$, er mengi allra x þ.a. $\mbox{ord}_px>0$.
+\end{setn}
+%Sö
+
 %bls 47 Mahler.
 \section*{Samfelld föll}
 Látum $I=[Q_p]$ tákna mengi allra p-legra heiltalna
