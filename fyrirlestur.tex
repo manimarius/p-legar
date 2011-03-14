@@ -65,15 +65,15 @@ Athugum nú að $\mathbb{Z}_p$ er hlutbaugur í mengjamargfeldinu
 grannmynstrið og $\prod_{n \geq 1} \mathbb{Z}/p^n\mathbb{Z}$ 
 margfeldisgrannmynstrinu, erfir $\mathbb{Z}_p$ grannmynstrið sem 
 gerir það að þjöppuðu rúmi.\\
-\\Látum nú $\varepsilon_n : \mathbb{Z}_p \rightarrow \mathbb{Z}/p^n 
-\mathbb{Z}$ vera fallið sem varpar p-legri heiltölu $x$ á n-ta stakið $x_n$.
-\begin{setn}
- Lestin $0 \rightarrow \mathbb{Z}_p \rightarrow^{p^n} \mathbb{Z}_p 
-\rightarrow^{\varepsilon_n} \mathbb{Z}/p^n\mathbb{Z} \rightarrow 0$ 
-er fleyguð.
-\end{setn}
-(Því getum við greint $\mathbb{Z}_p/p^n\mathbb{Z}$ með 
-$\mathbb{Z}/p^n\mathbb{Z}$).
+%\\Látum nú $\varepsilon_n : \mathbb{Z}_p \rightarrow \mathbb{Z}/p^n 
+%\mathbb{Z}$ vera fallið sem varpar p-legri heiltölu $x$ á n-ta stakið $x_n$.
+%\begin{setn}
+% Lestin $0 \rightarrow \mathbb{Z}_p \rightarrow^{p^n} \mathbb{Z}_p 
+%\rightarrow^{\varepsilon_n} \mathbb{Z}/p^n\mathbb{Z} \rightarrow 0$ 
+%er fleyguð.
+%\end{setn}
+%(Því getum við greint $\mathbb{Z}_p/p^n\mathbb{Z}$ með 
+%$\mathbb{Z}/p^n\mathbb{Z}$).
 % \begin{proof}
 % Margföldun með $p$ (og því einnig með $p^n$) er eintæk í 
 % $\mathbb{Z}_p$; ef $x = (x_n)$ er p-leg heiltala þ.a. $px = 0$,
@@ -84,7 +84,86 @@ $\mathbb{Z}/p^n\mathbb{Z}$).
 % Það er skýrt að $p^n \mathbb{Z}_p \subset Ker(\varepsilon_n)$; öfugt ef 
 % $x = (x_m)$ er í 
 % \end{proof}
+\begin{setn}
+ (a) Til að stak í $\mathbb{Z}_p$ hafi umhverfu er nauðsynlegt og nægjanlegt 
+að það sé ekki deilanlegt með $p$.\\
+ (b) Ef $\mathbb{U}$ er stak umhverfanlegra staka í $\mathbb{Z}_p$ er hægt að 
+skrifa hvert stak (nema núll) á óvtvírætt ákvarðaðan hátt á forminu $p^nu$ þar
+ sem $u \in \mathbb{U}$ og $n\geq 0$.
+\end{setn}
+Látum nú $\varepsilon_n : \mathbb{Z}_p \rightarrow \mathbb{Z}/p^n 
+\mathbb{Z}$ vera fallið sem varpar p-legri heiltölu $x$ á n-ta stakið $x_n$.
+\begin{proof}
+ Nóg að sanna (a) fyrir $\mathbb{Z}/p^n\mathbb{Z}$, tilfellið fyrir 
+$\mathbb{Z}_p$ fylgir. Ef $x \in \mathbb{Z}/p^n\mathbb{Z}$ tilheyrir 
+ekki $p\mathbb{Z}/p^n\mathbb{Z}$, þá er mynd þess í 
+$\mathbb{Z}/p\mathbb{Z}$ ekki núll, og því umhverfanlegt: 
+því eru til $y,z \in \mathbb{Z}/p^n\mathbb{Z}$ þannig að 
+$xy = 1-pz$, og því 
+\begin{align*}
+ xy(1+pz+\ldots+p^{n-1}z^{n-1}) = 1,
+\end{align*}
+sem sannar að x er umhverfanlegt.\\
+Hinsvegar, ef $x \in \mathbb{Z}_p$ er ekki núll, þá er til stærsta heiltala 
+$n$ þannig að $x_n = \varepsilon_n(x)$ er núll; þá er $x = p^nu$ með $u$ ekki 
+deilanlegt með p, og því er $u \in \mathbb{U}$ vegna (a). 
+\end{proof}
+\begin{Rit}
+Látum $x \in \mathbb{Z}_p$, $x \neq 0$; skrifum $x$ á forminu $p^nu$ með 
+$u \in U$. Talan $n$ er kölluð $p$-lega virðingin á $x$ og er skrifuð sem 
+$v_p(x)$. Við setjum $v_p(0) = +\infty$ og höfum 
+\begin{align*}
+ v_p(xy) &= v_p(x) + v_p(y) \\
+ v_p(x+y) &\geq \inf(v_p(x),v_p(y))
+\end{align*}
+Augljóst er af þessum formúlum að $\mathbb{Z}_p$ er heilbaugur.
+\end{Rit}
+\begin{setn}
+ Grannmynstrið á $\mathbb{Z}_p$ má skilgreina með firðinni
+\begin{align}
+ d(x,y) = e^{-v_p(x-y)}
+\end{align}
+Baugurinn $\mathbb{Z}_p$ er fullkomið firðrúm og $\mathbb{Z}$  er þétt 
+í honum.
+\end{setn}
+\begin{proof}
+ Íðulin $p^n \mathbb{Z}_p$ mynda grunn af grenndum um 0 og vegna þess að 
+$x \in p^n \mathbb{Z}_p$ er jafngilt því að $v_p(x) \geq n$ er grannmynstrið 
+á $\mathbb{Z}$ skilgreint með firðinni $d(x,y) = e^{-v_p(x-y)}$. 
+Fyrst að $\mathbb{Z}_p$ er þjappað, er það fullkomið. Að lokum, ef $x = (x_n)$
+ er stak í $\mathbb{Z}_p$ og ef $y_n \in \mathbb{Z}$ þannig að 
+$y_n \equiv x_n(mod p^n)$, þá er $\lim y_n = x$, sem sannar að $\mathbb{Z}$ 
+er þétt í $\mathbb{Z}_p$.
+\end{proof}
 
+\begin{skilgr}
+ Svið $p$-legu talnanna $\mathbb{Q}_p$ er brotasvið baugsins $\mathbb{Z}_p$.
+\end{skilgr}
+Við sjáum strax að $\mathbb{Q}_p = \mathbb{Z}_p[p^{-1}]$. Hvert stak 
+$x \in \mathbb{Q}_p^*$ er hægt að skrifa á ótvírætt ákvarðaðan hátt á forminu 
+$p^nu$ með $n \in \mathbb{Z}$, $u \in \mathbb{U}$; hér er $n$ aftur $p$-lega 
+virðingin af $x$ og er skrifað sem $v_p(x)$. Við höfum $v_p(x) \geq 0$ þþaa 
+$x \in \mathbb{Z}_p$. 
+\begin{setn}
+ Sviðið $\mathbb{Q}_p$, með grannmynstrinu skilgreindu af 
+$d(x,y) = e^{-v_p(x-y)}$, er staðþjappað og inniheldur $\mathbb{Z}_p$ sem 
+hlutbaug; sviðið $\mathbb{Q}$ er þétt í $\mathbb{Q}_p$.
+\end{setn}
+\begin{proof}
+ Augljóst.
+\end{proof}
+$Athugasemdir$\\
+(1) Við hefum getað skilgreint $\mathbb{Q}_p$ sem fullkomnuna á $\mathbb{Q}$ 
+fyrir $p$-legu firðina $d$.\\
+(2) Firðin $d$ er ofurfirð, það er 
+\begin{align*}
+ d(x,y) \leq \sup (d(x,y),d(y,z)).
+\end{align*}
+Af þessu sjáum við að runa $u_n$ hefur markgildi þþaa 
+\begin{align*}
+ \lim(u_{n+1} - u_n) = 0;
+\end{align*}
+og á sama hátt, röð er samleitin þþaa runa hennar stefni á 0.
 
 %Hér byrjar svo seinni fyrirlestur
 
