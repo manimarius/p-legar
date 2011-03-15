@@ -253,11 +253,11 @@ náttúrulega framsetningu þess. Þá er
 \end{hjalparsetn}
 %Örugglega fínt að laga þetta.
 \begin{proof}
-Til að fá þægilega frammsetningu setjum við $s_0 = 0$. Látum $1\leq k \leq k$ og lát
+Til að fá þægilega framsetningu setjum við $s_0 = 0$. Látum $1\leq k \leq 0$ og lát
 \begin{equation*}
 k = 0,0 0 0 \ldots 0 b_\nu b_{\nu + 1} \ldots b_t ,  
 \end{equation*}
-vera náttúrulega frammsetningu $k$ þar sem $b_\nu \geq 1$, þ.e.a.s. 
+vera náttúrulega framsetningu $k$ þar sem $b_\nu \geq 1$, þ.e.a.s. 
 \begin{equation*}
 k = b_\nu p^\nu + b_{\nu +1} p^{\nu+1} + \ldots + b_t p^t, \qquad s_k = b_\nu + b_{\nu+1} + \ldots + b_t.
 \end{equation*}
@@ -366,6 +366,7 @@ x = a_0 + a_1p+a_2p^2 + \ldots \qquad (a_k \mbox{digits}),
  |x|_p \leq 1 .
 \end{equation*}
 %Setja skilgreiningar haus hér.
+\begin{skilgr}
 Við skilgreinum föll
 %Laga þessa setningu eitthvað. 
 \begin{equation*}
@@ -392,11 +393,97 @@ I^* : |x-a|_p \leq p^{-r}
 x \rightarrow p^rx+a
 \end{equation*}
 fyrri skilgreiningu.
-%Setning
+\end{skilgr}
+
+\begin{hjalparsetn}
+Sérhver óendanleg röð af p-legum heiltölum inniheldur samleitna óendanlega hlutrunu. 
+\end{hjalparsetn}
+\begin{proof}
+Öll stök $x_n$ í runu $S$, eru af gerðinni
+\begin{equation*}
+x_n = a_{0n} + a_{1n}p+a_{2n}p^2 + \ldots \qquad (n= 1,2,3,\ldots)
+\end{equation*}
+þar sem a-in (lesið ö-in) eru heiltölur sem taka mest endanlega mörg gildi $0,1, \ldots p-1$.
+Því getum við smíðað óendanlega hlutrunu $S_0$ af þar sem öll $a_0n$-in hafa fast gildi $a_0$, svo getum við 
+smíðað óendanlega hlutrunu $S_1$ í $S_0$ með því að festa $a_1n$ og koll af kolli.
+Látum $x^{(n)}$ tákna n-ta stakið í $S_n$, þá er $\{x^{(1)},x^{(2)},\ldots \}$ óendanleg hlutruna af $S$ sem stefnir á $x$. 
+\end{proof}
+
+
 \begin{setn}
 Ef $f(x)$ er samfellt á $I$, þá er $f(x)$ samfellt í jöfnum mæli á I, þ.e.a.s fyrir hvert $s$, er til $t=t(s)$ óháð $x_0$ þ.a 
 \begin{equation}
 \mbox{ef   } x,x_0\in I \mbox{ og  } |x-x_0|_p \leq p^{-t}, \qquad \mbox{þá  } |f(x)-f(x_0)|_p \leq p^{-s}.
 \end{equation}
 \end{setn} 
+\begin{proof}
+G.r.f. að fullyrðingin sé röng. Fyrir gefið $s$, sama hversu stórt $t \geq 0$ er valið, eru þá til p-legar heiltölur $x_0$ og $x$ þ.a.
+\begin{equation*}
+\|x_0-x\|_p \leq p^{-t},
+\end{equation*}
+en
+\begin{equation*}
+\|f(x_0)-f(x)\|_p > p^{-s}.
+\end{equation*}
+Því megum við velja tvær runur af p-legum heiltölum þ.a.
+\begin{equation*}
+\{x_0^{(1)}, x_0^{(2)}, \ldots \} \qquad \mbox{og} \qquad \{x^{(1)}, x^{(2)}, \ldots\}
+\end{equation*}
+þannig að
+\begin{equation*}
+\|x_0^{(n)}-x^{(n)} \|_p \geq p^{-n}
+\end{equation*}
+en 
+\begin{equation*}
+\|f(x_0^{(n)}) - f(x^{(n)})\|_p > p^{-s}.
+\end{equation*}
+Ef $\{x_0^{(n)}\}$ er skipt út fyrir hvaða óendanlegu hlutrunu sem er, gilda enn jöfnurnar hér að ofan. 
+Nú gefur hjálparsetningin að markgildið
+\begin{equation*}
+\lim_{n\rightarrow \infty} x_0^{(n)}  = x_0
+\end{equation*}
+sé til og er p-leg heiltala. En einnig fæst að
+\begin{equation*}
+\lim_{n\rightarrow \infty} x^{(n)} = x_0
+\end{equation*}
+ fyrst að $\{x_0^{(n)} - x^{(n)} \}$ er núllruna. Því er 
+\begin{equation*}
+\|x_0-x^{(n)}\|_p = \|(x_0 - x_0^{(n)} + (x_0^{(n)} -x^{(n)}) \|_p \rightarrow 0,
+\end{equation*}
+svo að samfelldnin gefur nú
+\begin{equation*}
+\lim_{n\rightarrow \infty} f(x^{(n)}) = f(x_0).
+\end{equation*}
+En þetta er ómögulegt því
+\begin{equation*}
+\|f(x_0)-f(x^{(n)})\|_p = \lim_{n\rightarrow \infty} \|f(x_0^{(n)}) - f(x^{(n)})\|_p
+\end{equation*}
+er annaðhvort ekki til eða stærra en $p^{-s}$. FRÁLEITT!
+\end{proof}
+
+\begin{setn}
+Ef $f(x)$ er samfellt fyrir öll $x\in I$ , þá er $f(x)$ takmarkað, þ.e.a.s. til er heiltala $m$ þ.a. 
+\begin{equation*}
+\|f(x) \|_p \leq p^m \qquad \mbox{fyrir öll   } x\in I.
+\end{equation*}
+\end{setn}
+\begin{proof}
+G.r.f. að staðhæfingin sé ósönn. Þá, fyrir hvern lið $m=1,2,3,\ldots,$ er til p-leg heiltala $x_m$ þ.a.
+\begin{equation*}
+\|f(x_m)\| > p^m.
+\end{equation*}
+Þar sem $I$ er þjappað megum við skipta $\{x_m\}$ út fyrir samleitna hlutrunu , því megum við g.r.f að 
+\begin{equation*}
+\lim_{n \rightarrow \infty} x_m = x_0
+\end{equation*}
+sé núþegar til og því p-leg heiltala. Fyrst að $f(x)$ er samfellt í $x_0$,
+\begin{equation*}
+f(x_0) = \lim_{m\rightarrow \infty} f(x_m),
+\end{equation*}
+og því 
+\begin{equation*}
+\|f(x_0)\|_p = \lim_{m \rightarrow \infty} \|f(x_m)\|_p = \infty,
+\end{equation*}
+sem er FRÁLEITT!
+\end{proof}
 \end{document}
