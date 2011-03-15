@@ -251,7 +251,39 @@ náttúrulega framsetningu þess. Þá er
 \end{equation*}
 þar sem $s_n = a_0 + a_1 + \ldots + a_t$.
 \end{hjalparsetn}
-%VANTAR SÖ
+%Örugglega fínt að laga þetta.
+\begin{proof}
+Til að fá þægilega frammsetningu setjum við $s_0 = 0$. Látum $1\leq k \leq k$ og lát
+\begin{equation*}
+k = 0,0 0 0 \ldots 0 b_\nu b_{\nu + 1} \ldots b_t ,  
+\end{equation*}
+vera náttúrulega frammsetningu $k$ þar sem $b_\nu \geq 1$, þ.e.a.s. 
+\begin{equation*}
+k = b_\nu p^\nu + b_{\nu +1} p^{\nu+1} + \ldots + b_t p^t, \qquad s_k = b_\nu + b_{\nu+1} + \ldots + b_t.
+\end{equation*}
+Þá er 
+\begin{align*}
+k-1 = (p-1) & + (p-1)p + \ldots + (p-1)p^{\nu +1} &\\
+ & + (b_\nu -1)p^\nu + b_{\nu+1} p^{\nu +1} + \ldots + b_t p^t &
+\end{align*}
+og 
+\begin{align*}
+s_{k-1} &= \nu(p-1) + (b_\nu -1) + b_{\nu+1} + \ldots + b_t & \\
+ &  = \nu(p-1) + s_k -1 &
+\end{align*}
+Því fæst
+\begin{equation*}
+\nu = \frac{s_{k-1}-s_k + 1}{p-1 },
+\end{equation*}
+en klárlega er $\nu = \mbox{ord}_p k.$ , svo að
+\begin{equation*}
+\mbox{ord}_p k = \frac{s_{k-1 - s_k +1}}{p-1}
+\end{equation*}
+og nú fáum við með því að nota \ref{starwars} að 
+\begin{equation*}
+\mbox{ord}_p(n!) = \frac{1}{p-1} \sum_{k=1}^n (s_{k-1} - s_k +1) = \frac{n - s_n}{p-1}.
+\end{equation*}
+\end{proof}
 
 \begin{setn}
 Samleitnisvæðið fyrir veldvísisröðina $E(x) = \sum_{n=0}^{\infty} x^n/n!$ er mengi allra x þ.a.
@@ -298,6 +330,30 @@ og röðin er því samleitin. Ef aftur á móti $\mbox{ord}_p x \leq 0$, þá f
 \mbox{ord}_p \left( \frac{(-1)^{n-1}x^n}{n} \right) \nrightarrow \infty
 \end{equation*}
 \end{proof}
+
+\begin{setn}
+Lát $y\in \mathbb{Q}_p$ vera þannig að $\mbox{ord}_p y \geq 0$. Tvíliðunarröðin 
+\begin{equation*}
+(1+x)^y = \sum_{n=0}^\infty \binom{y}{n}x^n
+\end{equation*}
+er samleitin fyrir öll $x$ með $\mbox{ord}_px>1/(p-1)$.
+\end{setn}
+\begin{proof}
+Fyrst að $\mbox{ord}_py\geq0$ og 
+\begin{equation*}
+\binom{y}{n} = \frac{y(y-1)\ldots (y-(n-1))}{n!},
+\end{equation*}
+þá er ljóst að
+\begin{equation*}
+\mbox{ord}_p \binom{y}{n} \geq \mbox{ord}_p \left( \frac{1}{n!} \right).
+\end{equation*}
+Því fæst
+\begin{equation*}
+\mbox{ord}_p \left( \binom{y}{n} x^n \right) \geq \mbox{ord}_p \frac{(x^n) }{n!},
+\end{equation*}
+og við sýndum í sönnuninni á samleitnisvæðis veldívísisfallsins að seinasta jafnan stefnir á óendalegt ef að $x$ er innan samleitnisvæðisins.
+\end{proof}
+
 
 %bls 47 Mahler.
 \section*{Samfelld föll}
