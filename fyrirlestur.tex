@@ -112,26 +112,26 @@ deilanlegt með p, og því er $u \in \mathbb{U}$ vegna (a).
 \begin{skilgr}
  Virðing á sviði K er vörpun $K \rightarrow \mathbb{R}$ þ.a.
 \begin{align*}
- i)& \  |x|\geq 0; |x| = 0 \mbox{ þþaa } x = 0 \\
- ii)& \  |xy| = |x||y| \\
- iii)& \  |x+y| \leq |x| + |y|
+ i)& \  |x|\geq 0; |x| = 0 \mbox{ þþaa } x = 0, \\
+ ii)& \  |xy| = |x||y|, \\
+ iii)& \  |x+y| \leq |x| + |y|.
 \end{align*}
+Við segjum að virðing sé óarkímedísk ef $|x+y| \leq \max \{ |x|,|y| \}$.
 \end{skilgr}
 \begin{Rit}
 Látum $x \in \mathbb{Z}_p$, $x \neq 0$; skrifum $x$ á forminu $p^nu$ með 
 $u \in \mathbb{U}$. Talan $n$ er kölluð $p$-lega virðingin á $x$ og er skrifuð sem 
 $v_p(x)$. Við setjum $v_p(0) = +\infty$ og höfum 
 \begin{align*}
- v_p(xy) &= v_p(x) + v_p(y) \\
- v_p(x+y) &\geq \inf(v_p(x),v_p(y))
+ v_p(xy) &= v_p(x) + v_p(y), \\
+ v_p(x+y) &\geq \inf(v_p(x),v_p(y)).
 \end{align*}
 Augljóst er af þessum formúlum að $\mathbb{Z}_p$ er heilbaugur.
-
 \end{Rit}
 \begin{setn}
  Grannmynstrið á $\mathbb{Z}_p$ má skilgreina með firðinni
 \begin{align}
- d(x,y) = e^{-v_p(x-y)}
+ d(x,y) = e^{-v_p(x-y)}.
 \end{align}
 Baugurinn $\mathbb{Z}_p$ er fullkomið firðrúm og $\mathbb{Z}$  er þétt 
 í honum.
@@ -173,7 +173,42 @@ Af þessu sjáum við að runa $u_n$ hefur markgildi þþaa
 \begin{align*}
  \lim(u_{n+1} - u_n) = 0;
 \end{align*}
-og á sama hátt, röð er samleitin þþaa runa hennar stefni á 0.
+og á sama hátt, röð er samleitin þþaa runa hennar stefni á 0.\\
+\\Við fáum að hvert stak í $\mathbb{Q}_p$ má nú skrifa sem summu
+\begin{align*}
+ \sum_{j=N}^{\infty} a_jp^j,\ \ N \in \mathbb{Z}
+\end{align*}
+\begin{Rit}
+Ritum $p$-lega tölu $x$ nú á forminu
+\begin{align*}
+ \ldots x_2 x_1,x_0 \ldots x_{-v} (p)
+\end{align*}
+\end{Rit}
+\begin{daemi}
+Reiknum smá \\
+Samlagning í $\mathbb{Q}_7$:\\
+\begin{align*}
+1\ 11\ 11\ &1 \\
+ 216731,&254 \\
++\ \underline{2513125},&\underline{73} \\
+3033160,&314
+\end{align*}
+Margföldun í $\mathbb{Q}_7$:\\
+\begin{align*}
+ 3,&21 \\
+\cdot \ \underline{2},&\underline{1 \ \ } \\
+3\ &21 \\
++ \ \underline{64\ }&\underline{1 \ \ } \\
+100,&31
+\end{align*}
+%Deiling í $\mathbb{Q}_5$:\\
+%\begin{align*}
+%21,43|31,23& = \overline{034430},2 \\
+%43\ 23
+%\end{align*}
+
+\end{daemi}
+
 
 %Hér byrjar svo seinni fyrirlestur
 
