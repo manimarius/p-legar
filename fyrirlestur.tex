@@ -5,14 +5,14 @@
 \maketitle
 \section*{Fyrstu kynni - dæmi}
 %Hér setjum við sýnidæmi til að vekja áhuga.
-Í lok þessara tveggja fyrirlestra mun ykkur vonandi ekki brenna í augun á að sjá eftirfarandi jöfnu:
+Í lok þessara tveggja fyrirlestra mun ykkur vonandi ekki brenna í augun við að sjá eftirfarandi jöfnu:
 \begin{equation*}
 -1 = 4 + 4\cdot 5+4\cdot 5^2+4\cdot 5^3 \ldots
 \end{equation*}
-eða 
-\begin{equation*}
-\sqrt{7} = 1 + 1\cdot 3 + 1\cdot 3^2+0\cdot 3^3+2\cdot 3^4 \ldots
-\end{equation*}
+%eða 
+%\begin{equation*}
+%\sqrt{7} = 1 + 1\cdot 3 + 1\cdot 3^2+0\cdot 3^3+2\cdot 3^4 \ldots
+%\end{equation*}
 
 %Hér kemur fyrri fyrirlestur
 \section*{Inngangur}
@@ -20,7 +20,7 @@ Festum prímtölu p og skoðum formlegu veldaröðina
 \begin{align*}
 a = a_0 + a_1 p + a_2 p^2 + ...,
 \end{align*}
-þar sem $0 \leq a_i \leq p-1$. 
+þar sem $0 \leq a_i \leq p-1$ er heiltala. 
 Svona veldaraðir er hægt að leggja saman, draga frá hvorri annarri
  og margfalda.
 Með þessum hætti fáum við bauginn $\mathbb{Z}_p$, p-legu heiltölurnar.
@@ -142,7 +142,7 @@ $x \in p^n \mathbb{Z}_p$ er jafngilt því að $v_p(x) \geq n$ er grannmynstrið
 á $\mathbb{Z}_p$ skilgreint með firðinni $d(x,y) = e^{-v_p(x-y)}$. 
 Fyrst að $\mathbb{Z}_p$ er þjappað, er það fullkomið. Að lokum, ef $x = (x_n)$
  er stak í $\mathbb{Z}_p$ og ef $y_n \in \mathbb{Z}$ þannig að 
-$y_n \equiv x_n(mod p^n)$, þá er $\lim y_n = x$, sem sannar að $\mathbb{Z}$ 
+$y_n \equiv x_n(\mbox{mod} p^n)$, þá er $\lim y_n = x$, sem sannar að $\mathbb{Z}$ 
 er þétt í $\mathbb{Z}_p$.
 \end{proof}
 
@@ -259,15 +259,14 @@ Lát
 Því fæst $\|s_n - s_m \| \rightarrow 0$ þegar $n,m \rightarrow \infty $ og þar sem $k$ er fullkomið fæst niðurstaðan.  
 \end{proof}
 
-Fyrir veldaröð $\sum_{n=0}^{\infty} a_nx^n$ í $\mathbb{R}$ eða $\mathbb{C}$ segjum við að hún hafi samleitnigeislan $r$ 
+Fyrir veldaröð $\sum_{n=0}^{\infty} a_nx^n$ í $\mathbb{R}$ eða $\mathbb{C}$ segjum við að hún hafi samleitnigeislann $r$ 
 m.t.t. p-lega staðalsins ef fyrir öll x þ.a. $\|x\|_p < r$ veldaröðin er samleitin, en ósamleitin fyrir öll x þ.a. $\|x\|_p > r$, 
 þar sem r er gefið með
 \begin{equation*}
 r = \frac{1}{\limsup \sqrt{\|a_n\|_p }}.
 \end{equation*} 
 
-%Hér vantar örugglega smá
-%Rökstyðja þetta
+
 Við höfum að 
 \begin{equation}
 \label{starwars}
@@ -438,7 +437,7 @@ Sérhver óendanleg röð af p-legum heiltölum inniheldur samleitna óendanlega
 \begin{equation*}
 x_n = a_{0n} + a_{1n}p+a_{2n}p^2 + \ldots \qquad (n= 1,2,3,\ldots)
 \end{equation*}
-þar sem a-in (lesið ö-in) eru heiltölur sem taka mest endanlega mörg gildi $0,1, \ldots p-1$.
+þar sem a-in eru heiltölur sem taka mest endanlega mörg gildi $0,1, \ldots p-1$.
 Því getum við smíðað óendanlega hlutrunu $S_0$ af þar sem öll $a_0n$-in hafa fast gildi $a_0$, svo getum við 
 smíðað óendanlega hlutrunu $S_1$ í $S_0$ með því að festa $a_1n$ og koll af kolli.
 Látum $x^{(n)}$ tákna n-ta stakið í $S_n$, þá er $\{x^{(1)},x^{(2)},\ldots \}$ óendanleg hlutruna af $S$ sem stefnir á $x$. 
@@ -493,7 +492,7 @@ En þetta er ómögulegt því
 \begin{equation*}
 \|f(x_0)-f(x^{(n)})\|_p = \lim_{n\rightarrow \infty} \|f(x_0^{(n)}) - f(x^{(n)})\|_p
 \end{equation*}
-er annaðhvort ekki til eða stærra en $p^{-s}$. FRÁLEITT!
+er annaðhvort ekki til eða stærra en $p^{-s}$. Fráleitt!
 \end{proof}
 
 \begin{setn}
@@ -519,6 +518,6 @@ og því
 \begin{equation*}
 \|f(x_0)\|_p = \lim_{m \rightarrow \infty} \|f(x_m)\|_p = \infty,
 \end{equation*}
-sem er FRÁLEITT!
+sem er fráleitt!
 \end{proof}
 \end{document}
