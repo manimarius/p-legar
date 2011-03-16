@@ -218,7 +218,38 @@ S(a,r) = \{x:d(x,a) = r\} \\
 B^+(a,r) = \{x:d(x,a) \leq r\}
 \end{align*}
 tákna opnu kúluna, kúluhvelið og lokuðu kúluna með geisla $r$ um punktinn $a$.
+\end{skilgr}
+Þar sem við erum að skoða ofurfirðir þá gefur sterka þríhyrnings-ójafnan af sér nokkra skemmtilega eiginleika:
+\begin{setn}
+Ef $b \in S(a,r)$ þá er $B(b,r) \subset S(a,r)$.
+\end{setn}
+\begin{proof}
+Tökum $c \in B(b,r)$. Þá er fjarlægðin milli $a$ og $c$
+\begin{equation*}
+d(a,c) \leq \max(d(a,b),d(b,c)) = r 
+\end{equation*}
+svo $c \in S(a,r)$.
+\end{proof}
+Þessi setning gefur af sér 2 fylgisetnigar:
+\begin{fylgisetn}
+Allar lokaðar kúlur eru opin mengi og allar opnar kúlur eru lokuð mengi.
+\end{fylgisetn}
+\begin{fylgisetn} 
+Ofurfirðrúm er algjörlega ósamanhangandi; einu samanhangandi mengin eru einstökungar.
+\end{fylgisetn}
+Einn áhugaverðan eiginlega getum við bent á að lokum:
+\begin{setn}
+Ef $b\in B(a,r)$ þá er $B(a,r) = B(b,r)$. M.ö.o. sérhver punktur í kúlu er miðpunktur hennar.
+\end{setn}
+\begin{proof}
+Tökum $c\in B(b,r)$. Þá fæst
+\begin{equation*}
+d(a,c) = \max (d(a,b),d(b,c)) \leq r
+\end{equation*}
+svo $B(b,r) \subset B(a,r)$. Eins fæst að $B(a,r) \subset B(b,r)$, svo að $B(a,r) = B(b,r)$.
+\end{proof}
 %Hér byrjar svo seinni fyrirlestur
+
 
 %bls 25 Bachmann
 \section*{Samleitnar runur}
@@ -528,4 +559,6 @@ og því
 \end{equation*}
 sem er fráleitt!
 \end{proof}
+\newpage
+Hér kemur svo heimildaskráin.
 \end{document}
