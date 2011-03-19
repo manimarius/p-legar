@@ -254,7 +254,7 @@ svo $B(b,r) \subset B(a,r)$. Eins fæst að $B(a,r) \subset B(b,r)$, svo að $B(
 %bls 25 Bachmann
 \section*{Samleitnar runur}
 \begin{setn}
-Ef $k$ er fullkomið svið m.t.t. óarkemedískar virðingar $\| \cdot  \|$, og ef $\{ a_n \} $ er 
+Ef $k$ er fullkomið svið m.t.t. óarkímedískar virðingar $\| \cdot  \|$, og ef $\{ a_n \} $ er 
 runa af stökum í $k$ þ.a. $\lim a_n = 0$, þá er $\sum_{n=1}^\infty a_n$ samleitin.
 \end{setn}
 \begin{proof}
@@ -299,19 +299,13 @@ Lát
 \end{proof}
 
 Fyrir veldaröð $\sum_{n=0}^{\infty} a_nx^n$ í $\mathbb{R}$ eða $\mathbb{C}$ segjum við að hún hafi samleitnigeislann $r$ 
-m.t.t. p-lega staðalsins ef fyrir öll x þ.a. $\|x\|_p < r$ veldaröðin er samleitin, en ósamleitin fyrir öll x þ.a. $\|x\|_p > r$, 
+m.t.t. p-lega staðalsins ef fyrir öll x þ.a. $|x|_p < r$ veldaröðin er samleitin, en ósamleitin fyrir öll x þ.a. $|x|_p > r$, 
 þar sem r er gefið með
 \begin{equation*}
-r = \frac{1}{\limsup \sqrt{\|a_n\|_p }}.
+r = \frac{1}{\limsup \sqrt{|a_n|_p }}.
 \end{equation*} 
 
 
-Við höfum að 
-\begin{equation}
-\label{starwars}
-\mbox{ord}_p xy = \mbox{ord}_p x + \mbox{ord}_p y
-\end{equation}
-sem leiðir beint af $\|xy\|_p = \|x\|_p \|y\|_p$.
 %----
 \begin{hjalparsetn}
 Lát $n$ vera jákvæða heiltölu og 
@@ -320,7 +314,7 @@ n = a_0 + a_1p+ \ldots + a_tp^t, \qquad 0\leq a_i \leq p - 1
 \end{equation*}
 náttúrulega framsetningu þess. Þá er
 \begin{equation*}
-\mbox{ord}_p(n!) = \frac{n - s_n}{p-1}
+v_p(n!) = \frac{n - s_n}{p-1}
 \end{equation*}
 þar sem $s_n = a_0 + a_1 + \ldots + a_t$.
 \end{hjalparsetn}
@@ -348,30 +342,30 @@ s_{k-1} &= \nu(p-1) + (b_\nu -1) + b_{\nu+1} + \ldots + b_t & \\
 \begin{equation*}
 \nu = \frac{s_{k-1}-s_k + 1}{p-1 },
 \end{equation*}
-en klárlega er $\nu = \mbox{ord}_p k.$ , svo að
+en klárlega er $\nu = v_p k.$ , svo að
 \begin{equation*}
-\mbox{ord}_p k = \frac{s_{k-1 - s_k +1}}{p-1}
+v_p k = \frac{s_{k-1 - s_k +1}}{p-1}
 \end{equation*}
 og nú fáum við með því að nota \ref{starwars} að 
 \begin{equation*}
-\mbox{ord}_p(n!) = \frac{1}{p-1} \sum_{k=1}^n (s_{k-1} - s_k +1) = \frac{n - s_n}{p-1}.
+v_p(n!) = \frac{1}{p-1} \sum_{k=1}^n (s_{k-1} - s_k +1) = \frac{n - s_n}{p-1}.
 \end{equation*}
 \end{proof}
 
 \begin{setn}
 Samleitnisvæðið fyrir veldvísisröðina $E(x) = \sum_{n=0}^{\infty} x^n/n!$ er mengi allra x þ.a.
-$\mbox{ord}_px>1/(p-1)$.
+$v_p(x)>1/(p-1)$  $(\iff |x|_p < p^{- \frac{1}{p-1}} )$.
 \end{setn}
 \begin{proof}
 Með því að nota \ref{starwars} og hjálparsetninguna hér að ofan fáum við
 \begin{align*}
-\mbox{ord}_p \left( \frac{x^n}{n!} \right) & =  n \mbox{ord}_p x - \mbox{ord}_p(n!) & \\
- & =  n \mbox{ord}_p x - \left( \frac{n - s_n}{p-1} \right) &\\ 
- & =  n \left( \mbox{ord}_p x - \frac{1}{p-1} \right) + \frac{s_n}{p-1}&
+v_p \left( \frac{x^n}{n!} \right) & =  n v_p x - v_p(n!) & \\
+ & =  n v_p x - \left( \frac{n - s_n}{p-1} \right) &\\ 
+ & =  n \left( v_p x - \frac{1}{p-1} \right) + \frac{s_n}{p-1}&
 \end{align*}
-svo ef $\mbox{ord}_p x > 1/(p-1)$ þá $\lim_{n\rightarrow \infty } \mbox{ord}_p (x^n/n!) \rightarrow \infty$ 
-og því $\|x^n/n!\|_p \rightarrow 0$, þ.e.a.s röðin er samleitin.
-Ef aftur á móti $\mbox{ord}_px \leq 1/(p-1)$, þá fæst að fyrir öll $n$ af gerðinni $p^k$ að $s_n = 1$ og því $\mbox{ord}_p(x^n/n!) \nrightarrow \infty$.
+svo ef $v_p x > 1/(p-1)$ þá $\lim_{n\rightarrow \infty } v_p (x^n/n!) \rightarrow \infty$ 
+og því $|x^n/n!|_p \rightarrow 0$, þ.e.a.s röðin er samleitin.
+Ef aftur á móti $v_px \leq 1/(p-1)$, þá fæst að fyrir öll $n$ af gerðinni $p^k$ að $s_n = 1$ og því $v_p(x^n/n!) \nrightarrow \infty$.
 \end{proof}
 \begin{daemi}
 %útskýra
@@ -379,50 +373,50 @@ Ef $p=2$ og $x \in \mathbb{Z}$, þá gefur seinasta setning af sér að $x$ ver�
 \end{daemi}
 
 \begin{setn}
-Samleitnisvæðið fyrir lograröðina $\log(1+x) = \sum_{n=1}^{\infty} (-1)^{n-1}x^n/n$, er mengi allra x þ.a. $\mbox{ord}_px>0$.
+Samleitnisvæðið fyrir lograröðina $\log(1+x) = \sum_{n=1}^{\infty} (-1)^{n-1}x^n/n$, er mengi allra x þ.a. $v_p(x)>0$  $(\iff |x|_p<1)$.
 \end{setn}
 \begin{proof}
 Við höfum að 
 \begin{equation} \label{daft}
-\mbox{ord}_p \left( \frac{(-1)^{n-1}x^n}{n} \right) = n \mbox{ord}_px - \mbox{ord}_p n.
+v_p \left( \frac{(-1)^{n-1}x^n}{n} \right) = n v_px - v_p n.
 \end{equation}
 Hinsvegar vitum við að 
 \begin{equation*}
-p^{\mbox{ord}_p n} \leq n,
+p^{v_p n} \leq n,
 \end{equation*}
 og því 
 \begin{equation*}
-\mbox{ord}_p n \leq \frac{\log n}{\log p}.
+v_p n \leq \frac{\log n}{\log p}.
 \end{equation*}
-Með því að stinga þessu inní jöfnu \ref{daft} sýnir að ef $\mbox{ord}_p x> 0$, þá
+Með því að stinga þessu inní jöfnu \ref{daft} sýnir að ef $v_p x> 0$, þá
 \begin{equation*}
-\mbox{ord}_p \left( \frac{(-1)^{n-1}x^n}{n} \right) \rightarrow \infty,
+v_p \left( \frac{(-1)^{n-1}x^n}{n} \right) \rightarrow \infty,
 \end{equation*}
-og röðin er því samleitin. Ef aftur á móti $\mbox{ord}_p x \leq 0$, þá fæst að fyrir þau n þ.a. $p \nmid n $ að $\mbox{ord}_pn=0$, og
+og röðin er því samleitin. Ef aftur á móti $v_p x \leq 0$, þá fæst að fyrir þau n þ.a. $p \nmid n $ að $v_pn=0$, og
 \begin{equation*}
-\mbox{ord}_p \left( \frac{(-1)^{n-1}x^n}{n} \right) \nrightarrow \infty
+v_p \left( \frac{(-1)^{n-1}x^n}{n} \right) \nrightarrow \infty
 \end{equation*}
 \end{proof}
 
 \begin{setn}
-Lát $y\in \mathbb{Q}_p$ vera þannig að $\mbox{ord}_p y \geq 0$. Tvíliðunarröðin 
+Lát $y\in \mathbb{Q}_p$ vera þannig að $v_p y \geq 0$. Tvíliðunarröðin 
 \begin{equation*}
 (1+x)^y = \sum_{n=0}^\infty \binom{y}{n}x^n
 \end{equation*}
-er samleitin fyrir öll $x$ með $\mbox{ord}_px>1/(p-1)$.
+er samleitin fyrir öll $x$ með $v_px>1/(p-1)$  $( \iff |x|_p <p^{-\frac{1}{p-1}})$.
 \end{setn}
 \begin{proof}
-Fyrst að $\mbox{ord}_py\geq0$ og 
+Fyrst að $v_py\geq0$ og 
 \begin{equation*}
 \binom{y}{n} = \frac{y(y-1)\ldots (y-(n-1))}{n!},
 \end{equation*}
 þá er ljóst að
 \begin{equation*}
-\mbox{ord}_p \binom{y}{n} \geq \mbox{ord}_p \left( \frac{1}{n!} \right).
+v_p \binom{y}{n} \geq v_p \left( \frac{1}{n!} \right).
 \end{equation*}
 Því fæst
 \begin{equation*}
-\mbox{ord}_p \left( \binom{y}{n} x^n \right) \geq \mbox{ord}_p \frac{(x^n) }{n!},
+v_p \left( \binom{y}{n} x^n \right) \geq v_p \frac{(x^n) }{n!},
 \end{equation*}
 og við sýndum í sönnuninni á samleitnisvæðis veldívísisfallsins að seinasta jafnan stefnir á óendalegt ef að $x$ er innan samleitnisvæðisins.
 \end{proof}
@@ -430,20 +424,13 @@ og við sýndum í sönnuninni á samleitnisvæðis veldívísisfallsins að sei
 
 %bls 47 Mahler.
 \section*{Samfelld föll}
-Látum $I=[Q_p]$ tákna mengi allra p-legra heiltalna
-\begin{equation*}
-x = a_0 + a_1p+a_2p^2 + \ldots \qquad (a_k \mbox{digits}), 
-\end{equation*} 
-þ.e.a.s. mengi p-legra talna sem uppfylla
-\begin{equation*}
- |x|_p \leq 1 .
-\end{equation*}
+
 %Setja skilgreiningar haus hér.
 \begin{skilgr}
 Við skilgreinum föll
 %Laga þessa setningu eitthvað. 
 \begin{equation*}
-f:I \rightarrow Q_p
+f:\mathbb{Z}_p \rightarrow Q_p
 \end{equation*}
 samfelld ef fyrir 
 \begin{equation*}
@@ -484,19 +471,19 @@ Látum $x^{(n)}$ tákna n-ta stakið í $S_n$, þá er $\{x^{(1)},x^{(2)},\ldots
 
 
 \begin{setn}
-Ef $f(x)$ er samfellt á $I$, þá er $f(x)$ samfellt í jöfnum mæli á I, þ.e.a.s fyrir hvert $s$, er til $t=t(s)$ óháð $x_0$ þ.a 
+Ef $f(x)$ er samfellt á $\mathbb{Z}$, þá er $f(x)$ samfellt í jöfnum mæli á I, þ.e.a.s fyrir hvert $s$, er til $t=t(s)$ óháð $x_0$ þ.a 
 \begin{equation}
-\mbox{ef   } x,x_0\in I \mbox{ og  } |x-x_0|_p \leq p^{-t}, \qquad \mbox{þá  } |f(x)-f(x_0)|_p \leq p^{-s}.
+\mbox{ef   } x,x_0\in \mathbb{Z} \mbox{ og  } |x-x_0|_p \leq p^{-t}, \qquad \mbox{þá  } |f(x)-f(x_0)|_p \leq p^{-s}.
 \end{equation}
 \end{setn} 
 \begin{proof}
 G.r.f. að fullyrðingin sé röng. Fyrir gefið $s$, sama hversu stórt $t \geq 0$ er valið, eru þá til p-legar heiltölur $x_0$ og $x$ þ.a.
 \begin{equation*}
-\|x_0-x\|_p \leq p^{-t},
+|x_0-x|_p \leq p^{-t},
 \end{equation*}
 en
 \begin{equation*}
-\|f(x_0)-f(x)\|_p > p^{-s}.
+|f(x_0)-f(x)|_p > p^{-s}.
 \end{equation*}
 Því megum við velja tvær runur af p-legum heiltölum þ.a.
 \begin{equation*}
@@ -504,11 +491,11 @@ en
 \end{equation*}
 þannig að
 \begin{equation*}
-\|x_0^{(n)}-x^{(n)} \|_p \geq p^{-n}
+|x_0^{(n)}-x^{(n)} |_p \geq p^{-n}
 \end{equation*}
 en 
 \begin{equation*}
-\|f(x_0^{(n)}) - f(x^{(n)})\|_p > p^{-s}.
+|f(x_0^{(n)}) - f(x^{(n)})|_p > p^{-s}.
 \end{equation*}
 Ef $\{x_0^{(n)}\}$ er skipt út fyrir hvaða óendanlegu hlutrunu sem er, gilda enn jöfnurnar hér að ofan. 
 Nú gefur hjálparsetningin að markgildið
@@ -521,7 +508,7 @@ sé til og er p-leg heiltala. En einnig fæst að
 \end{equation*}
  fyrst að $\{x_0^{(n)} - x^{(n)} \}$ er núllruna. Því er 
 \begin{equation*}
-\|x_0-x^{(n)}\|_p = \|(x_0 - x_0^{(n)} + (x_0^{(n)} -x^{(n)}) \|_p \rightarrow 0,
+|x_0-x^{(n)}|_p = |(x_0 - x_0^{(n)} + (x_0^{(n)} -x^{(n)}) |_p \rightarrow 0,
 \end{equation*}
 svo að samfelldnin gefur nú
 \begin{equation*}
@@ -529,21 +516,21 @@ svo að samfelldnin gefur nú
 \end{equation*}
 En þetta er ómögulegt því
 \begin{equation*}
-\|f(x_0)-f(x^{(n)})\|_p = \lim_{n\rightarrow \infty} \|f(x_0^{(n)}) - f(x^{(n)})\|_p
+|f(x_0)-f(x^{(n)})|_p = \lim_{n\rightarrow \infty} |f(x_0^{(n)}) - f(x^{(n)})|_p
 \end{equation*}
 er annaðhvort ekki til eða stærra en $p^{-s}$. Fráleitt!
 \end{proof}
 
 \begin{setn}
-Ef $f(x)$ er samfellt fyrir öll $x\in I$ , þá er $f(x)$ takmarkað, þ.e.a.s. til er heiltala $m$ þ.a. 
+Ef $f(x)$ er samfellt fyrir öll $x\in \mathbb{Z}$ , þá er $f(x)$ takmarkað, þ.e.a.s. til er heiltala $m$ þ.a. 
 \begin{equation*}
-\|f(x) \|_p \leq p^m \qquad \mbox{fyrir öll   } x\in I.
+|f(x) |_p \leq p^m \qquad \mbox{fyrir öll   } x\in I.
 \end{equation*}
 \end{setn}
 \begin{proof}
 G.r.f. að staðhæfingin sé ósönn. Þá, fyrir hvern lið $m=1,2,3,\ldots,$ er til p-leg heiltala $x_m$ þ.a.
 \begin{equation*}
-\|f(x_m)\| > p^m.
+|f(x_m)|_p > p^m.
 \end{equation*}
 Þar sem $I$ er þjappað megum við skipta $\{x_m\}$ út fyrir samleitna hlutrunu , því megum við g.r.f að 
 \begin{equation*}
@@ -555,10 +542,17 @@ f(x_0) = \lim_{m\rightarrow \infty} f(x_m),
 \end{equation*}
 og því 
 \begin{equation*}
-\|f(x_0)\|_p = \lim_{m \rightarrow \infty} \|f(x_m)\|_p = \infty,
+|f(x_0)|_p = \lim_{m \rightarrow \infty} |f(x_m)|_p = \infty,
 \end{equation*}
 sem er fráleitt!
 \end{proof}
+
+\begin{setn}
+Sérhvert samfellt fall $f:\mathbb{Z} \rightarrow \mathbb{Q}$ má skrifa með nákvæmlega einum hætti sem
+\begin{equation*}
+f(x) = \sum_{n=0}^{+\infty} a_n \binom{x}{n}
+\end{equation*} 
+\end{setn}
 \newpage
 Hér kemur svo heimildaskráin.
 \end{document}
