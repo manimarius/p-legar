@@ -9,14 +9,14 @@
 \begin{equation*}
 -1 = 4 + 4\cdot 5+4\cdot 5^2+4\cdot 5^3 \ldots
 \end{equation*}
-%eða 
-%\begin{equation*}
-%\sqrt{7} = 1 + 1\cdot 3 + 1\cdot 3^2+0\cdot 3^3+2\cdot 3^4 \ldots
-%\end{equation*}
+eða 
+\begin{equation*}
+\sqrt{7} = 1 + 1\cdot 3 + 1\cdot 3^2+0\cdot 3^3+2\cdot 3^4 \ldots
+\end{equation*}
 
 %Hér kemur fyrri fyrirlestur
 \section*{Inngangur}
-Festum prímtölu p og skoðum formlegu veldaröðina
+Festum prímtölu p og skoðum formlegu röðina
 \begin{align*}
 a = a_0 + a_1 p + a_2 p^2 + ...,
 \end{align*}
@@ -26,8 +26,8 @@ Svona veldaraðir er hægt að leggja saman, draga frá hvorri annarri
 Með þessum hætti fáum við bauginn $\mathbb{Z}_p$, p-legu heiltölurnar.
 Þær hafa núllstakið $0 = 0+0p+0p^2+...$ og 
 einingarstakið $1 = 1 + 0p+0p^2+...$.
-\\Baugurinn $\mathbb{Z}_p$ hefur enga núlldeila svo hann er heilbaugur 
-og hefur brotasviðið $\mathbb{Q}_p$ sem kallað er svið p-legu talnanna.
+%\\Baugurinn $\mathbb{Z}_p$ hefur enga núlldeila svo hann er heilbaugur 
+%og hefur brotasviðið $\mathbb{Q}_p$ sem kallað er svið p-legu talnanna.
 
 %Hér viljum við skilgreina allt reglubundið
 \section*{Skilgreiningar}
@@ -58,14 +58,19 @@ Við fáum
  Baugur p-legu heiltalnanna $\mathbb{Z}_p$ er öfuga markgildið af 
 röðinni $\ref{Zruna}$
 \end{skilgr}
-Stak $x$ í $\mathbb{Z}_p$ er runan $(\ldots , x_n, \ldots, x_1)$ þar sem 
-$x_n \in \mathbb{Z}/p^n\mathbb{Z}$ og $\phi_n(x_{n+1}) = x_{n}$.
+Stak $x$ í $\mathbb{Z}_p$ er runan $(\ldots , x_n, \ldots, x_0)$ þar sem 
+$x_n \in \mathbb{Z}/p^{n+1}\mathbb{Z}$ og $\phi_n(x_{n+1}) = x_{n}$.
 Athugum nú að $\mathbb{Z}_p$ er hlutbaugur í mengjamargfeldinu
  $\prod_{n \geq 1} \mathbb{Z}/p^n\mathbb{Z}$. Ef við setjum á 
 $\mathbb{Z}/p^n\mathbb{Z}$ strjála grannmynstrið og á 
 $\prod_{n \geq 1} \mathbb{Z}/p^n\mathbb{Z}$ 
 margfeldisgrannmynstrið, erfir $\mathbb{Z}_p$ grannmynstrið sem 
 gerir það að þjöppuðu rúmi.\\
+Við fáum reikniaðgerðir
+\begin{align*}
+ (x_k) + (y_k) &= (x_k + y_k), \\
+(x_k)(y_k) &= (x_k y_k).
+\end{align*}
 %\\Látum nú $\varepsilon_n : \mathbb{Z}_p \rightarrow \mathbb{Z}/p^n 
 %\mathbb{Z}$ vera fallið sem varpar p-legri heiltölu $x$ á n-ta stakið $x_n$.
 %\begin{setn}
@@ -85,12 +90,43 @@ gerir það að þjöppuðu rúmi.\\
 % Það er skýrt að $p^n \mathbb{Z}_p \subset Ker(\varepsilon_n)$; öfugt ef 
 % $x = (x_m)$ er í 
 % \end{proof}
+\begin{skilgr}\label{virding}
+ Virðing á sviði K er vörpun $K \rightarrow \mathbb{R}$ þ.a.
+\begin{align*}
+ i)& \  |x|\geq 0; |x| = 0 \mbox{ þþaa } x = 0, \\
+ ii)& \  |xy| = |x||y|, \\
+ iii)& \  |x+y| \leq |x| + |y|.
+\end{align*}
+Við segjum að virðing sé óarkímedísk ef $|x+y| \leq \max \{ |x|,|y| \}$.
+\end{skilgr}
+\begin{skilgr}
+Skilgreinum fyrir $x \in \mathbb{Z}_p$
+\begin{align*}
+v_p(x) = 
+\begin{cases}
+ \min \{ k:x_k \neq 0 \} & \mbox{ef  } x \neq 0, \\
++ \infty & \mbox{ef  } x = 0.
+\end{cases} 
+\end{align*}
+$v_p$ er kölluð $p$-lega virðingin á $x$. \\ Við höfum
+\begin{align}\label{starwars}
+ v_p(xy) &= v_p(x) + v_p(y)
+\end{align}
+sem er jafngilt Skilgreiningu \ref{virding} $ii)$, og
+\begin{align*}
+ v_p(x+y) &\geq \min(v_p(x),v_p(y)).
+\end{align*}
+sem fæst út frá óarkímedísku þríhyrningsójöfnunni. \\
+Augljóst er af þessum formúlum að $\mathbb{Z}_p$ er heilbaugur.
+\end{skilgr}
+Ath. $\mathbb{Z}_p$ er höfuðíðalbaugur; íðulin eru \\ $p^n \mathbb{Z}_p 
+= \{(\ldots , x_k, \ldots, x_1, x_0): x_k = 0 \mbox{ fyrir } k<n \}.$
 \begin{setn}
- (a) Til að stak í $\mathbb{Z}_p$ hafi umhverfu er nauðsynlegt og nægjanlegt 
-að það sé ekki deilanlegt með $p$.\\
+ (a) Til að stak $x$ í $\mathbb{Z}_p$ hafi umhverfu er nauðsynlegt og nægjanlegt 
+að það sé ekki deilanlegt með $p$, þ.e. $v_p(x) = 0$.\\
  (b) Ef $\mathbb{U}$ er mengi umhverfanlegra staka í $\mathbb{Z}_p$ er hægt að 
 skrifa hvert stak (nema núll) á óvtvírætt ákvarðaðan hátt á forminu $p^nu$ þar
- sem $u \in \mathbb{U}$ og $n\geq 0$.
+ sem $u \in \mathbb{U}$ og $n\geq 0$. Þetta er frumþáttun í $\mathbb{Z}_p$.
 \end{setn}
 Látum nú $\varepsilon_n : \mathbb{Z}_p \rightarrow \mathbb{Z}/p^n 
 \mathbb{Z}$ vera fallið sem varpar p-legri heiltölu $x$ á n-ta stakið $x_n$.
@@ -98,7 +134,7 @@ Látum nú $\varepsilon_n : \mathbb{Z}_p \rightarrow \mathbb{Z}/p^n
  Nóg að sanna (a) fyrir $\mathbb{Z}/p^n\mathbb{Z}$, tilfellið fyrir 
 $\mathbb{Z}_p$ fylgir. Ef $x \in \mathbb{Z}/p^n\mathbb{Z}$ tilheyrir 
 ekki $p\mathbb{Z}/p^n\mathbb{Z}$, þá er mynd þess í 
-$\mathbb{Z}/p\mathbb{Z}$ ekki núll, og því umhverfanlegt: 
+$\mathbb{Z}/p\mathbb{Z}$ ekki núll, og því er hún umhverfanleg: 
 því eru til $y,z \in \mathbb{Z}/p^n\mathbb{Z}$ þannig að 
 $xy = 1-pz$, og því 
 \begin{align*}
@@ -109,37 +145,19 @@ Hinsvegar, ef $x \in \mathbb{Z}_p$ er ekki núll, þá er til stærsta heiltala
 $n$ þannig að $x_n = \varepsilon_n(x)$ er núll; þá er $x = p^nu$ með $u$ ekki 
 deilanlegt með p, og því er $u \in \mathbb{U}$ vegna (a). 
 \end{proof}
-\begin{skilgr}
- Virðing á sviði K er vörpun $K \rightarrow \mathbb{R}$ þ.a.
-\begin{align*}
- i)& \  |x|\geq 0; |x| = 0 \mbox{ þþaa } x = 0, \\
- ii)& \  |xy| = |x||y|, \\
- iii)& \  |x+y| \leq |x| + |y|.
-\end{align*}
-Við segjum að virðing sé óarkímedísk ef $|x+y| \leq \max \{ |x|,|y| \}$.
-\end{skilgr}
-\begin{Rit}
-Látum $x \in \mathbb{Z}_p$, $x \neq 0$; skrifum $x$ á forminu $p^nu$ með 
-$u \in \mathbb{U}$. Talan $n$ er kölluð $p$-lega virðingin á $x$ og er skrifuð sem 
-$v_p(x)$. Við setjum $v_p(0) = +\infty$ og höfum 
-\begin{align*}
- v_p(xy) &= v_p(x) + v_p(y), \\
- v_p(x+y) &\geq \inf(v_p(x),v_p(y)).
-\end{align*}
-Augljóst er af þessum formúlum að $\mathbb{Z}_p$ er heilbaugur.
-\end{Rit}
 \begin{setn}
  Grannmynstrið á $\mathbb{Z}_p$ má skilgreina með firðinni
 \begin{align}
- d(x,y) = e^{-v_p(x-y)}.
+ d(x,y) = p^{-v_p(x-y)}.
 \end{align}
+Athugum að hér er þá $p^{-(+\infty)} = 0$ \\
 Baugurinn $\mathbb{Z}_p$ er fullkomið firðrúm og $\mathbb{Z}$  er þétt 
 í honum.
 \end{setn}
 \begin{proof}
  Íðulin $p^n \mathbb{Z}_p$ mynda grunn af grenndum um 0 og vegna þess að 
 $x \in p^n \mathbb{Z}_p$ er jafngilt því að $v_p(x) \geq n$ er grannmynstrið 
-á $\mathbb{Z}_p$ skilgreint með firðinni $d(x,y) = e^{-v_p(x-y)}$. 
+á $\mathbb{Z}_p$ skilgreint með firðinni $d(x,y) = p^{-v_p(x-y)}$. 
 Fyrst að $\mathbb{Z}_p$ er þjappað, er það fullkomið. Að lokum, ef $x = (x_n)$
  er stak í $\mathbb{Z}_p$ og ef $y_n \in \mathbb{Z}$ þannig að 
 $y_n \equiv x_n(\mbox{mod} p^n)$, þá er $\lim y_n = x$, sem sannar að $\mathbb{Z}$ 
@@ -151,19 +169,23 @@ er þétt í $\mathbb{Z}_p$.
 \end{skilgr}
 Við sjáum strax að $\mathbb{Q}_p = \mathbb{Z}_p[p^{-1}]$. Hvert stak 
 $x \in \mathbb{Q}_p^*$ er hægt að skrifa á ótvírætt ákvarðaðan hátt á forminu 
-$p^nu$ með $n \in \mathbb{Z}$, $u \in \mathbb{U}$; hér er $n$ aftur $p$-lega 
-virðingin af $x$ og er skrifað sem $v_p(x)$. Við höfum $v_p(x) \geq 0$ þþaa 
-$x \in \mathbb{Z}_p$. 
+$p^nu$ með $n \in \mathbb{Z}$, $u \in \mathbb{U}$; hér getum við því aftur 
+skilgreint $v_p(x)$ á sama hátt og áðan fyrir $x \in \mathbb{Q}_p$. 
+Við höfum $v_p(x) \geq 0$ þþaa $x \in \mathbb{Z}_p$. 
+\\Við fáum að hvert stak í $\mathbb{Q}_p$ má nú skrifa sem summu
+\begin{align*}
+ \sum_{j=N}^{\infty} a_jp^j,\ \ N \in \mathbb{Z}.
+\end{align*}
 \begin{setn}
  Sviðið $\mathbb{Q}_p$, með grannmynstrinu skilgreindu af 
-$d(x,y) = e^{-v_p(x-y)}$, er staðþjappað og inniheldur $\mathbb{Z}_p$ sem 
+$d(x,y) = p^{-v_p(x-y)}$, er staðþjappað og inniheldur $\mathbb{Z}_p$ sem 
 hlutbaug; sviðið $\mathbb{Q}$ er þétt í $\mathbb{Q}_p$.
 \end{setn}
 \begin{proof}
  Augljóst.
 \end{proof}
 $Athugasemdir$\\
-(1) Við hefðum getað skilgreint $\mathbb{Q}_p$ sem fullkomnuna á $\mathbb{Q}$ 
+(1) Við hefðum getað skilgreint $\mathbb{Q}_p$ sem fullkomnunina á $\mathbb{Q}$ 
 fyrir $p$-legu firðina $d$.\\
 (2) Firðin $d$ er ofurfirð, það er 
 \begin{align*}
@@ -174,14 +196,10 @@ Af þessu sjáum við að runa $u_n$ hefur markgildi þþaa
  \lim(u_{n+1} - u_n) = 0;
 \end{align*}
 og á sama hátt, röð er samleitin þþaa runa hennar stefni á 0.\\
-\\Við fáum að hvert stak í $\mathbb{Q}_p$ má nú skrifa sem summu
-\begin{align*}
- \sum_{j=N}^{\infty} a_jp^j,\ \ N \in \mathbb{Z}
-\end{align*}
 \begin{Rit}
 Ritum $p$-lega tölu $x$ nú á forminu
 \begin{align*}
- \ldots x_2 x_1,x_0 \ldots x_{-v} (p)
+ \ldots x_2 x_1x_0, \ldots x_{-v} (p)
 \end{align*}
 \end{Rit}
 \begin{daemi}
@@ -220,6 +238,8 @@ B^+(a,r) = \{x:d(x,a) \leq r\}
 tákna opnu kúluna, kúluhvelið og lokuðu kúluna með geisla $r$ um punktinn $a$.
 \end{skilgr}
 Þar sem við erum að skoða ofurfirðir þá gefur sterka þríhyrnings-ójafnan af sér nokkra skemmtilega eiginleika:
+Athugum fyrst eftirfarandi:
+Firð er ofurfirð þþaa allir þríhyrningar séu jafnarma og grunnlínan sé ekki lengri en armur.
 \begin{setn}
 Ef $b \in S(a,r)$ þá er $B(b,r) \subset S(a,r)$.
 \end{setn}
