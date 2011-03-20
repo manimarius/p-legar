@@ -39,14 +39,14 @@ Ef við skerum af formlegu veldaröðinni við einhvert veldið á p fæst heil 
 \begin{align*}
 a = a_0 + a_1 p + a_2 p^2 + \ldots + a_{n-1}p^{n-1}. 
 \end{align*}
-Munum að í baugnun $\mathbb{Z}_p$ má geyma og fá lánað í samlagningu, ef við 
+Í baugnun $\mathbb{Z}_p$ viljum við að hægt sé að geyma og fá lánað í samlagningu, ef við 
 fáum $1$ lánaðan frá $p^n$ og skerum af við veldið $n$, fáum við 
 \begin{align*}
  a_0 + a_1 p + a_2 p^2 + \ldots + (a_{n-1} + p)p^{n-1}.
 \end{align*}
 Þessi afskurður verður aðeins vel skilgreindur ef við túlkum hvert 
-stak eftir afskurðinn sem stak í $\mathbb{Z}/p^n \mathbb{Z}$, þ.e. það 
-er í lagi að geyma og fá lánað.\\
+stak eftir afskurðinn sem stak í $\mathbb{Z}/p^n \mathbb{Z}$ og þá 
+verður í lagi að geyma og fá lánað.\\
 \\Skoðum nú vörpunina
 \begin{align*}
  \centering \phi_n : \mathbb{Z}/p^{n+1} \mathbb{Z} \rightarrow 
@@ -193,7 +193,7 @@ $Athugasemdir$\\
 fyrir $p$-legu firðina $d$.\\
 (2) Firðin $d$ er ofurfirð, það er 
 \begin{align*}
- d(x,y) \leq \sup (d(x,y),d(y,z)).
+ d(x,y) \leq \sup (d(x,z),d(y,z)).
 \end{align*}
 Af þessu sjáum við að runa $u_n$ hefur markgildi þþaa 
 \begin{align*}
@@ -267,7 +267,7 @@ B^+(a,r) = \{x:d(x,a) \leq r\}
 \end{align*}
 tákna opnu kúluna, kúluhvelið og lokuðu kúluna með geisla $r$ um punktinn $a$.
 \end{skilgr}
-Þar sem við erum að skoða ofurfirðir þá gefur sterka þríhyrnings-ójafnan af sér nokkra skemmtilega eiginleika:
+Þar sem við erum að skoða ofurfirðir þá gefur sterka þríhyrnings-ójafnan af sér nokkra skemmtilega eiginleika.
 Athugum fyrst eftirfarandi:
 Firð er ofurfirð þþaa allir þríhyrningar séu jafnarma og grunnlínan sé ekki lengri en armur.
 \begin{setn}
@@ -305,7 +305,7 @@ svo $B(b,r) \subset B(a,r)$. Eins fæst að $B(a,r) \subset B(b,r)$, svo að $B(
 \section*{Samleitnar runur}
 \begin{setn}
 Ef $k$ er fullkomið svið m.t.t. óarkímedískar virðingar $\| \cdot  \|$, og ef $\{ a_n \} $ er 
-runa af stökum í $k$ þ.a. $\lim a_n = 0$, þá er $\sum_{n=1}^\infty a_n$ samleitin.
+runa af stökum í $k$ þ.a. $\lim_{n \rightarrow \infty} a_n = 0$, þá er $\sum_{n=1}^\infty a_n$ samleitin.
 \end{setn}
 \begin{proof}
 Lát 
@@ -340,9 +340,9 @@ Lát
 \begin{equation*}
 | \| a_n \| + \ldots + \| a_{m+1} \| | = \| a_n \| + \ldots + \| a_{m+1} \|
 \end{equation*}
-því $\| a_i \| \leq 0$, og 
+því $\| a_i \| \geq 0$, og 
 \begin{equation}
-\| s_n - s_m \| = \|a_n\| + \ldots + \|a_{m+1}\| \rightarrow 0
+\| s_n - s_m \| \leq \|a_n\| + \ldots + \|a_{m+1}\| \rightarrow 0
 \end{equation}
 þegar $n,m \rightarrow \infty$ fyrst að $\sum_{n=1}^\infty \|a_n\|$ er samleitin. 
 Því fæst $\|s_n - s_m \| \rightarrow 0$ þegar $n,m \rightarrow \infty $ og þar sem $k$ er fullkomið fæst niðurstaðan.  
@@ -370,7 +370,7 @@ v_p(n!) = \frac{n - s_n}{p-1}
 \end{hjalparsetn}
 %Örugglega fínt að laga þetta.
 \begin{proof}
-Til að fá þægilega framsetningu setjum við $s_0 = 0$. Látum $1\leq k \leq 0$ og lát
+Til að fá þægilega framsetningu setjum við $s_0 = 0$. Látum $1 \geq k \geq 0$ og lát
 \begin{equation*}
 k = 0,0 0 0 \ldots 0 b_\nu b_{\nu + 1} \ldots b_t ,  
 \end{equation*}
@@ -380,7 +380,7 @@ k = b_\nu p^\nu + b_{\nu +1} p^{\nu+1} + \ldots + b_t p^t, \qquad s_k = b_\nu + 
 \end{equation*}
 Þá er 
 \begin{align*}
-k-1 = (p-1) & + (p-1)p + \ldots + (p-1)p^{\nu +1} &\\
+k-1 = (p-1) & + (p-1)p + \ldots + (p-1)p^{\nu -1} &\\
  & + (b_\nu -1)p^\nu + b_{\nu+1} p^{\nu +1} + \ldots + b_t p^t &
 \end{align*}
 og 
@@ -390,9 +390,9 @@ s_{k-1} &= \nu(p-1) + (b_\nu -1) + b_{\nu+1} + \ldots + b_t & \\
 \end{align*}
 Því fæst
 \begin{equation*}
-\nu = \frac{s_{k-1}-s_k + 1}{p-1 },
+\nu = \frac{s_{k-1} - s_k + 1}{p-1 },
 \end{equation*}
-en klárlega er $\nu = v_p k.$ , svo að
+en klárlega er $\nu = v_p (k).$ , svo að
 \begin{equation*}
 v_p (k) = \frac{s_{k-1 - s_k +1}}{p-1}
 \end{equation*}
@@ -415,17 +415,18 @@ v_p \left( \frac{x^n}{n!} \right) & =  n v_p (x) - v_p(n!) & \\
 \end{align*}
 svo ef $v_p (x) > 1/(p-1)$ þá $\lim_{n\rightarrow \infty } v_p (x^n/n!) \rightarrow \infty$ 
 og því $|x^n/n!|_p \rightarrow 0$, þ.e.a.s röðin er samleitin.
-Ef aftur á móti $v_p(x) \leq 1/(p-1)$, þá fæst að fyrir öll $n$ af gerðinni $p^k$ að $s_n = 1$ og því $v_p(x^n/n!) \nrightarrow \infty$.
+Ef aftur á móti $v_p(x) \leq 1/(p-1)$, þá fæst að fyrir öll $n$ af gerðinni $p^k$,  $s_n = 1$ og því $v_p(x^n/n!) \nrightarrow \infty$.
 \end{proof}
 
 Sjáum nú að ef veldisvísisröðin er samleitin fyrir $x$ og $y$ þá gefur \ref{starwars} að hún er samleitin fyrir $x+y$. Því fæst
 \begin{equation*}
-E(x+y) = E(x) + E(y)
+E(x+y) = E(x) E(y)
 \end{equation*}
 
 \begin{daemi}
 %útskýra
-Ef $p=2$ og $x \in \mathbb{Z}$, þá gefur seinasta setning af sér að $x$ verður að vera margfeldi af 4 til að vera í samleitnigeisla veldisvísisfallsins. 
+Ef $p$ er oddatala, þá fæst fyrir $x = kp$, $k \in \mathbb{Z}$, að $v_p(x) \geq 1 \geq 1/(p-1)$ og röðin er því samleitið fyrir svoleiðis $x$.
+Ef hinsvegar $p=2$ og $x \in \mathbb{Z}$, þá gefur seinasta setning af sér að $x$ verður að vera margfeldi af 4 til að vera í samleitnigeisla veldisvísisfallsins. 
 \end{daemi}
 
 \begin{setn}
@@ -444,11 +445,11 @@ og því
 \begin{equation*}
 v_p (n) \leq \frac{\log n}{\log p}.
 \end{equation*}
-Með því að stinga þessu inní jöfnu \ref{daft} sýnir að ef $v_p (x)> 0$, þá
+Með því að stinga þessu inní jöfnu \ref{daft} sést að ef $v_p (x)> 0$, þá
 \begin{equation*}
 v_p \left( \frac{(-1)^{n-1}x^n}{n} \right) \rightarrow \infty,
 \end{equation*}
-og röðin er því samleitin. Ef aftur á móti $v_p x \leq 0$, þá fæst að fyrir þau n þ.a. $p \nmid n $ að $v_pn=0$, og
+og röðin er því samleitin. Ef aftur á móti $v_p (x) \leq 0$, þá fæst að fyrir þau n þ.a. $p \nmid n $ að $v_p(n)=0$, og
 \begin{equation*}
 v_p \left( \frac{(-1)^{n-1}x^n}{n} \right) \nrightarrow \infty
 \end{equation*}
@@ -499,7 +500,7 @@ Sönnun á þessum jöfnum er þó sleppt hér.
 Við skilgreinum föll
 %Laga þessa setningu eitthvað. 
 \begin{equation*}
-f:\mathbb{Z}_p \rightarrow Q_p
+f:\mathbb{Z}_p \rightarrow \mathbb{Q}_p
 \end{equation*}
 samfelld ef fyrir 
 \begin{equation*}
@@ -540,9 +541,9 @@ Látum $x^{(n)}$ tákna n-ta stakið í $S_n$, þá er $\{x^{(1)},x^{(2)},\ldots
 
 
 \begin{setn}
-Ef $f(x)$ er samfellt á $\mathbb{Z}$, þá er $f(x)$ samfellt í jöfnum mæli á I, þ.e.a.s fyrir hvert $s$, er til $t=t(s)$ óháð $x_0$ þ.a 
+Ef $f(x)$ er samfellt á $\mathbb{Z}_p$, þá er $f(x)$ samfellt í jöfnum mæli á I, þ.e.a.s fyrir hvert $s$, er til $t=t(s)$ óháð $x_0$ þ.a 
 \begin{equation}
-\mbox{ef   } x,x_0\in \mathbb{Z} \mbox{ og  } |x-x_0|_p \leq p^{-t}, \qquad \mbox{þá  } |f(x)-f(x_0)|_p \leq p^{-s}.
+\mbox{ef   } x,x_0\in \mathbb{Z}_p \mbox{ og  } |x-x_0|_p \leq p^{-t}, \qquad \mbox{þá  } |f(x)-f(x_0)|_p \leq p^{-s}.
 \end{equation}
 \end{setn} 
 \begin{proof}
@@ -577,7 +578,7 @@ sé til og er p-leg heiltala. En einnig fæst að
 \end{equation*}
  fyrst að $\{x_0^{(n)} - x^{(n)} \}$ er núllruna. Því er 
 \begin{equation*}
-|x_0-x^{(n)}|_p = |(x_0 - x_0^{(n)} + (x_0^{(n)} -x^{(n)}) |_p \rightarrow 0,
+|x_0-x^{(n)}|_p = |(x_0 - x_0^{(n)} )+ (x_0^{(n)} -x^{(n)}) |_p \rightarrow 0,
 \end{equation*}
 svo að samfelldnin gefur nú
 \begin{equation*}
@@ -591,9 +592,9 @@ er annaðhvort ekki til eða stærra en $p^{-s}$. Fráleitt!
 \end{proof}
 
 \begin{setn}
-Ef $f(x)$ er samfellt fyrir öll $x\in \mathbb{Z}$ , þá er $f(x)$ takmarkað, þ.e.a.s. til er heiltala $m$ þ.a. 
+Ef $f(x)$ er samfellt fyrir öll $x\in \mathbb{Z}_p$ , þá er $f(x)$ takmarkað, þ.e.a.s. til er heiltala $m$ þ.a. 
 \begin{equation*}
-|f(x) |_p \leq p^m \qquad \mbox{fyrir öll   } x\in I.
+|f(x) |_p \leq p^m \qquad \mbox{fyrir öll   } x\in \mathbb{Z}_p.
 \end{equation*}
 \end{setn}
 \begin{proof}
@@ -601,7 +602,7 @@ G.r.f. að staðhæfingin sé ósönn. Þá, fyrir hvern lið $m=1,2,3,\ldots,$ 
 \begin{equation*}
 |f(x_m)|_p > p^m.
 \end{equation*}
-Þar sem $I$ er þjappað megum við skipta $\{x_m\}$ út fyrir samleitna hlutrunu , því megum við g.r.f að 
+Þar sem $\mathbb{Z}_p$ er þjappað megum við skipta $\{x_m\}$ út fyrir samleitna hlutrunu , því megum við g.r.f að 
 \begin{equation*}
 \lim_{n \rightarrow \infty} x_m = x_0
 \end{equation*}
@@ -617,7 +618,7 @@ sem er fráleitt!
 \end{proof}
 
 \begin{setn}
-Sérhvert samfellt fall $f:\mathbb{Z} \rightarrow \mathbb{Q}$ má skrifa með nákvæmlega einum hætti sem
+Sérhvert samfellt fall $f:\mathbb{Z}_p \rightarrow \mathbb{Q}_p$ má skrifa með nákvæmlega einum hætti sem
 \begin{equation*}
 f(x) = \sum_{n=0}^{+\infty} a_n \binom{x}{n}
 \end{equation*} 
