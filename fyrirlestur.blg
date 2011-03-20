@@ -1,0 +1,48 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: fyrirlestur.aux
+The style file: plain.bst
+Database file #1: plegar.bib
+Warning--can't use both author and editor fields in NewEntry1
+Warning--can't use both author and editor fields in NewEntry4
+You've used 4 entries,
+            2118 wiz_defined-function locations,
+            526 strings with 4495 characters,
+and the built_in function-call counts, 969 in all, are:
+= -- 88
+> -- 28
+< -- 1
++ -- 13
+- -- 8
+* -- 57
+:= -- 167
+add.period$ -- 11
+call.type$ -- 4
+change.case$ -- 14
+chr.to.int$ -- 0
+cite$ -- 6
+duplicate$ -- 42
+empty$ -- 94
+format.name$ -- 8
+if$ -- 199
+int.to.chr$ -- 0
+int.to.str$ -- 4
+missing$ -- 5
+newline$ -- 22
+num.names$ -- 8
+pop$ -- 24
+preamble$ -- 1
+purify$ -- 12
+quote$ -- 0
+skip$ -- 28
+stack$ -- 0
+substring$ -- 46
+swap$ -- 7
+text.length$ -- 1
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 12
+warning$ -- 2
+while$ -- 10
+width$ -- 5
+write$ -- 42
+(There were 2 warnings)

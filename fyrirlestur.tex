@@ -394,7 +394,7 @@ s_{k-1} &= \nu(p-1) + (b_\nu -1) + b_{\nu+1} + \ldots + b_t & \\
 \end{equation*}
 en klárlega er $\nu = v_p k.$ , svo að
 \begin{equation*}
-v_p k = \frac{s_{k-1 - s_k +1}}{p-1}
+v_p (k) = \frac{s_{k-1 - s_k +1}}{p-1}
 \end{equation*}
 og nú fáum við með því að nota \ref{starwars} að 
 \begin{equation*}
@@ -409,13 +409,13 @@ $v_p(x)>1/(p-1)$  $(\iff |x|_p < p^{- \frac{1}{p-1}} )$.
 \begin{proof}
 Með því að nota \ref{starwars} og hjálparsetninguna hér að ofan fáum við
 \begin{align*}
-v_p \left( \frac{x^n}{n!} \right) & =  n v_p x - v_p(n!) & \\
- & =  n v_p x - \left( \frac{n - s_n}{p-1} \right) &\\ 
- & =  n \left( v_p x - \frac{1}{p-1} \right) + \frac{s_n}{p-1}&
+v_p \left( \frac{x^n}{n!} \right) & =  n v_p (x) - v_p(n!) & \\
+ & =  n v_p (x) - \left( \frac{n - s_n}{p-1} \right) &\\ 
+ & =  n \left( v_p (x) - \frac{1}{p-1} \right) + \frac{s_n}{p-1}&
 \end{align*}
-svo ef $v_p x > 1/(p-1)$ þá $\lim_{n\rightarrow \infty } v_p (x^n/n!) \rightarrow \infty$ 
+svo ef $v_p (x) > 1/(p-1)$ þá $\lim_{n\rightarrow \infty } v_p (x^n/n!) \rightarrow \infty$ 
 og því $|x^n/n!|_p \rightarrow 0$, þ.e.a.s röðin er samleitin.
-Ef aftur á móti $v_px \leq 1/(p-1)$, þá fæst að fyrir öll $n$ af gerðinni $p^k$ að $s_n = 1$ og því $v_p(x^n/n!) \nrightarrow \infty$.
+Ef aftur á móti $v_p(x) \leq 1/(p-1)$, þá fæst að fyrir öll $n$ af gerðinni $p^k$ að $s_n = 1$ og því $v_p(x^n/n!) \nrightarrow \infty$.
 \end{proof}
 
 Sjáum nú að ef veldisvísisröðin er samleitin fyrir $x$ og $y$ þá gefur \ref{starwars} að hún er samleitin fyrir $x+y$. Því fæst
@@ -434,17 +434,17 @@ Samleitnisvæðið fyrir lograröðina $\log(1+x) = \sum_{n=1}^{\infty} (-1)^{n-
 \begin{proof}
 Við höfum að 
 \begin{equation} \label{daft}
-v_p \left( \frac{(-1)^{n-1}x^n}{n} \right) = n v_px - v_p n.
+v_p \left( \frac{(-1)^{n-1}x^n}{n} \right) = n v_p(x) - v_p (n).
 \end{equation}
 Hinsvegar vitum við að 
 \begin{equation*}
-p^{v_p n} \leq n,
+p^{v_p (n)} \leq n,
 \end{equation*}
 og því 
 \begin{equation*}
-v_p n \leq \frac{\log n}{\log p}.
+v_p (n) \leq \frac{\log n}{\log p}.
 \end{equation*}
-Með því að stinga þessu inní jöfnu \ref{daft} sýnir að ef $v_p x> 0$, þá
+Með því að stinga þessu inní jöfnu \ref{daft} sýnir að ef $v_p (x)> 0$, þá
 \begin{equation*}
 v_p \left( \frac{(-1)^{n-1}x^n}{n} \right) \rightarrow \infty,
 \end{equation*}
@@ -460,14 +460,14 @@ Eins og fyrir veldisvísisfallið fáum við að ef lograröðin er samleitin fy
 \end{equation*} 
 
 \begin{setn}
-Lát $y\in \mathbb{Q}_p$ vera þannig að $v_p y \geq 0$. Tvíliðunarröðin 
+Lát $y\in \mathbb{Q}_p$ vera þannig að $v_p (y) \geq 0$. Tvíliðunarröðin 
 \begin{equation*}
 (1+x)^y = \sum_{n=0}^\infty \binom{y}{n}x^n
 \end{equation*}
-er samleitin fyrir öll $x$ með $v_px>1/(p-1)$  $( \iff |x|_p <p^{-\frac{1}{p-1}})$.
+er samleitin fyrir öll $x$ með $v_p(x)>1/(p-1)$  $( \iff |x|_p <p^{-\frac{1}{p-1}})$.
 \end{setn}
 \begin{proof}
-Fyrst að $v_py\geq0$ og 
+Fyrst að $v_p(y)\geq0$ og 
 \begin{equation*}
 \binom{y}{n} = \frac{y(y-1)\ldots (y-(n-1))}{n!},
 \end{equation*}
@@ -477,7 +477,7 @@ v_p \binom{y}{n} \geq v_p \left( \frac{1}{n!} \right).
 \end{equation*}
 Því fæst
 \begin{equation*}
-v_p \left( \binom{y}{n} x^n \right) \geq v_p \frac{(x^n) }{n!},
+v_p \left( \binom{y}{n} x^n \right) \geq v_p \left( \frac{x^n}{n!} \right),
 \end{equation*}
 og við sýndum í sönnuninni á samleitnisvæðis veldívísisfallsins að seinasta jafnan stefnir á óendalegt ef að $x$ er innan samleitnisvæðisins.
 \end{proof}
@@ -622,6 +622,14 @@ Sérhvert samfellt fall $f:\mathbb{Z} \rightarrow \mathbb{Q}$ má skrifa með n�
 f(x) = \sum_{n=0}^{+\infty} a_n \binom{x}{n}
 \end{equation*} 
 \end{setn}
+
 \newpage
-Hér kemur svo heimildaskráin.
+\nocite{NewEntry1}
+\nocite{NewEntry2}
+\nocite{NewEntry3}
+\nocite{NewEntry4}
+
+\bibliographystyle{plain}
+\bibliography{plegar}
+
 \end{document}
