@@ -1,22 +1,3 @@
-\begin{thebibliography}{1}
-
-\bibitem{NewEntry1}
-George Bachman.
-\newblock {\em Introduction to p-adic numbers and valuation theory}.
-\newblock Academic Press, 1964.
-
-\bibitem{NewEntry3}
-Franz Lemmermeyer.
-\newblock Lecture on p-adic numbers, March 2004.
-
-\bibitem{NewEntry2}
-C.~C. MacDuffe.
-\newblock The p-adic numbers of hensel.
-\newblock {\em The American Mathematical Monthly}, 45(8):500--508, 1938.
-
-\bibitem{NewEntry4}
-Kurt Mahler.
-\newblock {\em Introduction to p-adic numbers and their functions}, volume~64.
-\newblock Cambridge at the university press, 1973.
+\begin{thebibliography}{}
 
 \end{thebibliography}
