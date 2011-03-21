@@ -200,6 +200,7 @@ Af þessu sjáum við að runa $u_n$ hefur markgildi þþaa
  \lim(u_{n+1} - u_n) = 0;
 \end{align*}
 og á sama hátt, röð er samleitin þþaa runa hennar stefni á 0.\\
+(3) Við sjáum að fyrir öll $x \in \mathbb{Z}_p$ er $|x|_p \leq 1$, og því fæst að $\mathbb{Z}_p = \mathbb{B}(0,1) $ í $\mathbb{Q}_p$.
 \begin{Rit}
 Ritum $p$-lega tölu $x$ nú á forminu
 \begin{align*}
@@ -304,8 +305,8 @@ svo $B(b,r) \subset B(a,r)$. Eins fæst að $B(a,r) \subset B(b,r)$, svo að $B(
 %bls 25 Bachmann
 \section*{Samleitnar runur}
 \begin{setn}
-Ef $k$ er fullkomið svið m.t.t. óarkímedískar virðingar $\| \cdot  \|$, og ef $\{ a_n \} $ er 
-runa af stökum í $k$ þ.a. $\lim_{n \rightarrow \infty} a_n = 0$, þá er $\sum_{n=1}^\infty a_n$ samleitin.
+Ef $\mathbb{K}$ er fullkomið svið m.t.t. óarkímedískar virðingar $\| \cdot  \|$, og ef $\{ a_n \} $ er 
+runa af stökum í $\mathbb{K}$ þ.a. $\lim_{n \rightarrow \infty} a_n = 0$, þá er $\sum_{n=1}^\infty a_n$ samleitin.
 \end{setn}
 \begin{proof}
 Lát 
@@ -320,11 +321,11 @@ s_m = a_1 + \ldots + a_m,
 \begin{equation*}
 \|s_n - s_m \| = \| a_n + \ldots + a_{m+1} \| \leq \max_{m+1 \leq i \leq n} \|a_i\| \rightarrow 0
 \end{equation*}
-þegar $n,m \rightarrow \infty$, því er $\lim s_n$ til þar sem $k$ er fullkomið. Þ.a.l er $\sum_{n=1}^\infty a_n$ samleitin.
+þegar $n,m \rightarrow \infty$, því er $\lim s_n$ til þar sem $\mathbb{K}$ er fullkomið. Þ.a.l er $\sum_{n=1}^\infty a_n$ samleitin.
 \end{proof}
 
 \begin{setn}
-Ef $k$ er fullkomið svið m.t.t. virðingar $\| \cdot \|$, og ef $\{ a_n \}$ er runa af stökum í $k$ 
+Ef $\mathbb{K}$ er fullkomið svið m.t.t. virðingar $\| \cdot \|$, og ef $\{ a_n \}$ er runa af stökum í $\mathbb{K}$ 
 þ.a. $\sum_{n=1}^{\infty} \| a_n \| $ er samleitin, þá er $\sum_{n=1}^\infty a_n $ samleitin. 
 \end{setn}
 \begin{proof}
@@ -345,7 +346,7 @@ Lát
 \| s_n - s_m \| \leq \|a_n\| + \ldots + \|a_{m+1}\| \rightarrow 0
 \end{equation}
 þegar $n,m \rightarrow \infty$ fyrst að $\sum_{n=1}^\infty \|a_n\|$ er samleitin. 
-Því fæst $\|s_n - s_m \| \rightarrow 0$ þegar $n,m \rightarrow \infty $ og þar sem $k$ er fullkomið fæst niðurstaðan.  
+Því fæst $\|s_n - s_m \| \rightarrow 0$ þegar $n,m \rightarrow \infty $ og þar sem $\mathbb{K}$ er fullkomið fæst niðurstaðan.  
 \end{proof}
 
 Fyrir veldaröð $\sum_{n=0}^{\infty} a_nx^n$ í $\mathbb{R}$ eða $\mathbb{C}$ segjum við að hún hafi samleitnigeislann $r$ 
