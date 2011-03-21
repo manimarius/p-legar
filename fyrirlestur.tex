@@ -290,9 +290,13 @@ Ef $b \in S(a,r)$ þá er $B(b,r) \subset S(a,r)$.
 \begin{proof}
 Tökum $c \in B(b,r)$. Þá er fjarlægðin milli $a$ og $c$
 \begin{equation*}
-d(a,c) \leq \max(d(a,b),d(b,c)) = r 
+ d(a,c) \leq \max(d(a,b),d(b,c)) = r 
 \end{equation*}
-svo $c \in S(a,r)$.
+en nú er einnig
+\begin{equation*}
+r = d(a,b) \leq \max \{ d(a,c),\overbrace{d(b,c)}^{< r} \}
+\end{equation*}
+svo $d(a,c) = r$ og því $c \in S(a,r)$.
 \end{proof}
 Þessi setning gefur af sér 2 fylgisetnigar:
 \begin{fylgisetn}
