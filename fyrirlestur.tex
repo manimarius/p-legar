@@ -94,15 +94,6 @@ Við fáum reikniaðgerðir
 % Það er skýrt að $p^n \mathbb{Z}_p \subset Ker(\varepsilon_n)$; öfugt ef 
 % $x = (x_m)$ er í 
 % \end{proof}
-\begin{skilgr}\label{virding}
- Virðing á sviði K er vörpun $K \rightarrow \mathbb{R}$ þ.a.
-\begin{align*}
- i)& \  |x|\geq 0; |x| = 0 \mbox{ þþaa } x = 0, \\
- ii)& \  |xy| = |x||y|, \\
- iii)& \  |x+y| \leq |x| + |y|.
-\end{align*}
-Við segjum að virðing sé óarkímedísk ef $|x+y| \leq \max \{ |x|,|y| \}$.
-\end{skilgr}
 \begin{skilgr}
 Skilgreinum fyrir $x \in \mathbb{Z}_p$
 \begin{align*}
@@ -112,7 +103,30 @@ v_p(x) =
 + \infty & \mbox{ef  } x = 0.
 \end{cases} 
 \end{align*}
-$v_p$ er kölluð $p$-lega virðingin á $x$. \\ Við höfum
+\end{skilgr}
+\begin{skilgr}\label{virding}
+ Virðing á baugi(sviði) $\mathbb{K}$ er vörpun $\mathbb{K} \rightarrow \mathbb{R}$ þ.a.
+\begin{align*}
+ i)& \  |x|\geq 0; |x| = 0 \mbox{ þþaa } x = 0, \\
+ ii)& \  |xy| = |x||y|, \\
+ iii)& \  |x+y| \leq |x| + |y|.
+\end{align*}
+Við segjum að virðing sé óarkímedísk ef $|x+y| \leq \max \{ |x|,|y| \}$.
+\end{skilgr}
+Við fáum 
+\begin{skilgr}
+Á $\mathbb{Z}_p$ skilgreinum við 
+\begin{align}
+ |x|_p =
+\begin{cases}
+ 0 &\mbox{ ef } x = 0, \\
+p^{-v_p(x)} &\mbox{ ef } x \neq 0.
+\end{cases}
+\end{align}
+Augljóst er að þetta skilgreinir virðingu á $\mathbb{Z}_p$.
+\end{skilgr}
+
+Við höfum
 \begin{align}\label{starwars}
  v_p(xy) &= v_p(x) + v_p(y)
 \end{align}
@@ -121,8 +135,7 @@ sem er jafngilt Skilgreiningu \ref{virding} $ii)$, og
  v_p(x+y) &\geq \min(v_p(x),v_p(y)).
 \end{align*}
 sem fæst út frá óarkímedísku þríhyrningsójöfnunni. \\
-Augljóst er af þessum formúlum að $\mathbb{Z}_p$ er heilbaugur.
-\end{skilgr}
+Augljóst er af þessum formúlum að $\mathbb{Z}_p$ er heilbaugur.\\
 Ath. $\mathbb{Z}_p$ er höfuðíðalbaugur; íðulin eru \\ $p^n \mathbb{Z}_p 
 = \{(\ldots , x_k, \ldots, x_1, x_0): x_k = 0 \mbox{ fyrir } k<n \}.$
 \begin{setn}
@@ -152,16 +165,15 @@ deilanlegt með p, og því er $u \in \mathbb{U}$ vegna (a).
 \begin{setn}
  Grannmynstrið á $\mathbb{Z}_p$ má skilgreina með firðinni
 \begin{align}
- d(x,y) = p^{-v_p(x-y)}.
+ d(x,y) = |x-y|_p
 \end{align}
-Athugum að hér er þá $p^{-(+\infty)} = 0$ \\
 Baugurinn $\mathbb{Z}_p$ er fullkomið firðrúm og $\mathbb{Z}$  er þétt 
 í honum.
 \end{setn}
 \begin{proof}
  Íðulin $p^n \mathbb{Z}_p$ mynda grunn af grenndum um 0 og vegna þess að 
 $x \in p^n \mathbb{Z}_p$ er jafngilt því að $v_p(x) \geq n$ er grannmynstrið 
-á $\mathbb{Z}_p$ skilgreint með firðinni $d(x,y) = p^{-v_p(x-y)}$. 
+á $\mathbb{Z}_p$ skilgreint með firðinni $d(x,y) = |x-y|_p$. 
 Fyrst að $\mathbb{Z}_p$ er þjappað, er það fullkomið. Að lokum, ef $x = (x_n)$
  er stak í $\mathbb{Z}_p$ og ef $y_n \in \mathbb{Z}$ þannig að 
 $y_n \equiv x_n(\mbox{mod} p^n)$, þá er $\lim y_n = x$, sem sannar að $\mathbb{Z}$ 
@@ -174,7 +186,8 @@ er þétt í $\mathbb{Z}_p$.
 Við sjáum strax að $\mathbb{Q}_p = \mathbb{Z}_p[p^{-1}]$. Hvert stak 
 $x \in \mathbb{Q}_p^*$ er hægt að skrifa á ótvírætt ákvarðaðan hátt á forminu 
 $p^nu$ með $n \in \mathbb{Z}$, $u \in \mathbb{U}$; hér getum við því aftur 
-skilgreint $v_p(x)$ á sama hátt og áðan fyrir $x \in \mathbb{Q}_p$. 
+skilgreint $v_p(x)$ á sama hátt og áðan fyrir $x \in \mathbb{Q}_p$ og við fáum 
+því að virðingin $|\cdot|_p$ framlengist á $\mathbb{Q}_p$.
 Við höfum $v_p(x) \geq 0$ þþaa $x \in \mathbb{Z}_p$. 
 \\Við fáum að hvert stak í $\mathbb{Q}_p$ má nú skrifa sem summu
 \begin{align*}
@@ -182,7 +195,7 @@ Við höfum $v_p(x) \geq 0$ þþaa $x \in \mathbb{Z}_p$.
 \end{align*}
 \begin{setn}
  Sviðið $\mathbb{Q}_p$, með grannmynstrinu skilgreindu af 
-$d(x,y) = p^{-v_p(x-y)}$, er staðþjappað og inniheldur $\mathbb{Z}_p$ sem 
+$d(x,y) = |x-y|_p$, er staðþjappað og inniheldur $\mathbb{Z}_p$ sem 
 hlutbaug; sviðið $\mathbb{Q}$ er þétt í $\mathbb{Q}_p$.
 \end{setn}
 \begin{proof}
@@ -268,7 +281,7 @@ B^+(a,r) = \{x:d(x,a) \leq r\}
 \end{align*}
 tákna opnu kúluna, kúluhvelið og lokuðu kúluna með geisla $r$ um punktinn $a$.
 \end{skilgr}
-Þar sem við erum að skoða ofurfirðir þá gefur sterka þríhyrnings-ójafnan af sér nokkra skemmtilega eiginleika.
+Þar sem við erum að skoða ofurfirðir þá gefur sterka þríhyrningsójafnan af sér nokkra skemmtilega eiginleika.
 Athugum fyrst eftirfarandi:
 Firð er ofurfirð þþaa allir þríhyrningar séu jafnarma og grunnlínan sé ekki lengri en armur.
 \begin{setn}
